@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E5B2237231F003F0F4A /* AppDelegate.swift */; };
+		18A24E5E2237231F003F0F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E5D2237231F003F0F4A /* ViewController.swift */; };
+		18A24E612237231F003F0F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E5F2237231F003F0F4A /* Main.storyboard */; };
+		18A24E6322372323003F0F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6222372323003F0F4A /* Assets.xcassets */; };
+		18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6422372323003F0F4A /* LaunchScreen.storyboard */; };
+		18A24E7122372323003F0F4A /* DesafioPicPayiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E7022372323003F0F4A /* DesafioPicPayiOSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18A24E6D22372323003F0F4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18A24E502237231F003F0F4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18A24E572237231F003F0F4A;
+			remoteInfo = DesafioPicPayiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioPicPayiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A24E5B2237231F003F0F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18A24E5D2237231F003F0F4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18A24E602237231F003F0F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18A24E6222372323003F0F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18A24E6522372323003F0F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18A24E6722372323003F0F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A24E6C22372323003F0F4A /* DesafioPicPayiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioPicPayiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A24E7022372323003F0F4A /* DesafioPicPayiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioPicPayiOSTests.swift; sourceTree = "<group>"; };
+		18A24E7222372323003F0F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18A24E552237231F003F0F4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A24E6922372323003F0F4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18A24E4F2237231F003F0F4A = {
+			isa = PBXGroup;
+			children = (
+				18A24E5A2237231F003F0F4A /* DesafioPicPayiOS */,
+				18A24E6F22372323003F0F4A /* DesafioPicPayiOSTests */,
+				18A24E592237231F003F0F4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18A24E592237231F003F0F4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */,
+				18A24E6C22372323003F0F4A /* DesafioPicPayiOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18A24E5A2237231F003F0F4A /* DesafioPicPayiOS */ = {
+			isa = PBXGroup;
+			children = (
+				18A24E5B2237231F003F0F4A /* AppDelegate.swift */,
+				18A24E5D2237231F003F0F4A /* ViewController.swift */,
+				18A24E5F2237231F003F0F4A /* Main.storyboard */,
+				18A24E6222372323003F0F4A /* Assets.xcassets */,
+				18A24E6422372323003F0F4A /* LaunchScreen.storyboard */,
+				18A24E6722372323003F0F4A /* Info.plist */,
+			);
+			path = DesafioPicPayiOS;
+			sourceTree = "<group>";
+		};
+		18A24E6F22372323003F0F4A /* DesafioPicPayiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				18A24E7022372323003F0F4A /* DesafioPicPayiOSTests.swift */,
+				18A24E7222372323003F0F4A /* Info.plist */,
+			);
+			path = DesafioPicPayiOSTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18A24E572237231F003F0F4A /* DesafioPicPayiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A24E7522372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOS" */;
+			buildPhases = (
+				18A24E542237231F003F0F4A /* Sources */,
+				18A24E552237231F003F0F4A /* Frameworks */,
+				18A24E562237231F003F0F4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesafioPicPayiOS;
+			productName = DesafioPicPayiOS;
+			productReference = 18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18A24E6B22372323003F0F4A /* DesafioPicPayiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A24E7822372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOSTests" */;
+			buildPhases = (
+				18A24E6822372323003F0F4A /* Sources */,
+				18A24E6922372323003F0F4A /* Frameworks */,
+				18A24E6A22372323003F0F4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18A24E6E22372323003F0F4A /* PBXTargetDependency */,
+			);
+			name = DesafioPicPayiOSTests;
+			productName = DesafioPicPayiOSTests;
+			productReference = 18A24E6C22372323003F0F4A /* DesafioPicPayiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18A24E502237231F003F0F4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Thiago Santiago";
+				TargetAttributes = {
+					18A24E572237231F003F0F4A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					18A24E6B22372323003F0F4A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 18A24E572237231F003F0F4A;
+					};
+				};
+			};
+			buildConfigurationList = 18A24E532237231F003F0F4A /* Build configuration list for PBXProject "DesafioPicPayiOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18A24E4F2237231F003F0F4A;
+			productRefGroup = 18A24E592237231F003F0F4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18A24E572237231F003F0F4A /* DesafioPicPayiOS */,
+				18A24E6B22372323003F0F4A /* DesafioPicPayiOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18A24E562237231F003F0F4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */,
+				18A24E6322372323003F0F4A /* Assets.xcassets in Resources */,
+				18A24E612237231F003F0F4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A24E6A22372323003F0F4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18A24E542237231F003F0F4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A24E5E2237231F003F0F4A /* ViewController.swift in Sources */,
+				18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A24E6822372323003F0F4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A24E7122372323003F0F4A /* DesafioPicPayiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18A24E6E22372323003F0F4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18A24E572237231F003F0F4A /* DesafioPicPayiOS */;
+			targetProxy = 18A24E6D22372323003F0F4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18A24E5F2237231F003F0F4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A24E602237231F003F0F4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18A24E6422372323003F0F4A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A24E6522372323003F0F4A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18A24E7322372323003F0F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18A24E7422372323003F0F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18A24E7622372323003F0F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C247LTFS54;
+				INFOPLIST_FILE = DesafioPicPayiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.DesafioPicPayiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18A24E7722372323003F0F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C247LTFS54;
+				INFOPLIST_FILE = DesafioPicPayiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.DesafioPicPayiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18A24E7922372323003F0F4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C247LTFS54;
+				INFOPLIST_FILE = DesafioPicPayiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.DesafioPicPayiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioPicPayiOS.app/DesafioPicPayiOS";
+			};
+			name = Debug;
+		};
+		18A24E7A22372323003F0F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C247LTFS54;
+				INFOPLIST_FILE = DesafioPicPayiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.thiago.DesafioPicPayiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioPicPayiOS.app/DesafioPicPayiOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18A24E532237231F003F0F4A /* Build configuration list for PBXProject "DesafioPicPayiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A24E7322372323003F0F4A /* Debug */,
+				18A24E7422372323003F0F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A24E7522372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A24E7622372323003F0F4A /* Debug */,
+				18A24E7722372323003F0F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A24E7822372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A24E7922372323003F0F4A /* Debug */,
+				18A24E7A22372323003F0F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18A24E502237231F003F0F4A /* Project object */;
+}
