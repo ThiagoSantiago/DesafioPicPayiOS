@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="DesafioPicPayiOS" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="eEf-M2-gkK" id="Udi-aO-TQz"/>
+                <outlet property="searchbar" destination="K23-ro-jrw" id="FgG-Wv-u7z"/>
+                <outlet property="titleLabel" destination="849-ao-3GY" id="5VG-bC-8dr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eEf-M2-gkK">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contatos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="849-ao-3GY">
+                    <rect key="frame" x="16" y="53.5" width="162.5" height="45.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysq-ZB-7OY">
+                    <rect key="frame" x="0.0" y="95" width="446" height="80"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" restorationIdentifier="searchField" searchBarStyle="minimal" placeholder="A quem você deseja pagar?" translatesAutoresizingMaskIntoConstraints="NO" id="K23-ro-jrw">
+                            <rect key="frame" x="0.0" y="14" width="446" height="56"/>
+                            <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="K23-ro-jrw" firstAttribute="trailing" secondItem="ysq-ZB-7OY" secondAttribute="trailing" id="HL9-SN-grX"/>
+                        <constraint firstItem="K23-ro-jrw" firstAttribute="leading" secondItem="ysq-ZB-7OY" secondAttribute="leading" id="IuU-EY-nhY"/>
+                        <constraint firstAttribute="bottom" secondItem="K23-ro-jrw" secondAttribute="bottom" constant="10" id="TGn-tu-dY3"/>
+                        <constraint firstAttribute="height" constant="80" id="eNV-2h-fep"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rLI-Tt-tKv" firstAttribute="trailing" secondItem="ysq-ZB-7OY" secondAttribute="trailing" id="08z-pe-VPy"/>
+                <constraint firstItem="ysq-ZB-7OY" firstAttribute="leading" secondItem="rLI-Tt-tKv" secondAttribute="leading" id="HWA-RH-yUc"/>
+                <constraint firstItem="849-ao-3GY" firstAttribute="leading" secondItem="rLI-Tt-tKv" secondAttribute="leading" constant="16" id="XYm-FP-5zT"/>
+                <constraint firstItem="ysq-ZB-7OY" firstAttribute="bottom" secondItem="rLI-Tt-tKv" secondAttribute="bottom" id="fre-uJ-duG"/>
+                <constraint firstItem="849-ao-3GY" firstAttribute="top" secondItem="eEf-M2-gkK" secondAttribute="top" constant="53.5" id="qt3-WQ-soX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="rLI-Tt-tKv"/>
+            <point key="canvasLocation" x="259.19999999999999" y="-283.35832083958024"/>
+        </view>
+    </objects>
+</document>
