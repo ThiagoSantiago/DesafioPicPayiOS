@@ -39,7 +39,7 @@
                             </constraints>
                             <color key="textColor" red="0.67450980392156867" green="0.69411764705882351" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                     <color key="value" red="0.67450980392156867" green="0.69411764705882351" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>

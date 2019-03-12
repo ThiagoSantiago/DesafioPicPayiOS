@@ -19,7 +19,9 @@ class ContactListPresenter: ContactListPresenterProtocol {
     weak var viewController: ContactListProtocol?
     
     func closeLoadingView() {
-        viewController?.hideLoadingView()
+        DispatchQueue.main.async {
+            self.viewController?.hideLoadingView()
+        }
     }
     
     func presentLoadingView() {
@@ -27,7 +29,9 @@ class ContactListPresenter: ContactListPresenterProtocol {
     }
     
     func presentError(message: String) {
-        viewController?.displayError(message)
+        DispatchQueue.main.async {
+            self.viewController?.displayError(message)
+        }
     }
     
     func presentUsers(list: [UserViewModel]) {

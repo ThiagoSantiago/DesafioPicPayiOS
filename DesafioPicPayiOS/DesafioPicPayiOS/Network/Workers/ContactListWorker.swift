@@ -12,6 +12,7 @@ class ContactListWorker {
     typealias Failure = (_ error: PicPayApiError) -> Void
     
     let requester: PicPayApiRequestProtocol
+    var users: UsersList = []
     
     init(requester: PicPayApiRequestProtocol = PicPayApiRequest()) {
         self.requester = requester
@@ -27,7 +28,7 @@ class ContactListWorker {
                 do {
                     let decoder = JSONDecoder()
                     let userssList = try decoder.decode(UsersList.self, from: data)
-                    
+                    self.users = userssList
                     success(userssList)
                 } catch {
                     failure(.couldNotParseObject)
@@ -36,5 +37,16 @@ class ContactListWorker {
                 failure(error)
             }
         }
+    }
+    
+    typealias UsersFilteredResult = (_ users: [User]) -> Void
+    func seachUser(name: String, completion: @escaping UsersFilteredResult ) {
+        var filteredData = users
+        let trimmedString = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmedString != ""{
+            filteredData = users.filter { $0.name.contains(name) || $0.username.contains(name)}
+        }
+        
+        completion(filteredData)
     }
 }

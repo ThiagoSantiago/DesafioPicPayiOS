@@ -12,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsListViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
+                <outlet property="errorMessage" destination="La1-X3-bFF" id="GAR-bA-tP8"/>
+                <outlet property="errorView" destination="ihL-XB-gNw" id="b69-2y-7y8"/>
                 <outlet property="headerHeightConstraint" destination="kub-6w-dfZ" id="n1h-Ni-IwW"/>
+                <outlet property="headerView" destination="d8g-d5-h5S" id="02U-8P-sXX"/>
                 <outlet property="tableView" destination="ZwV-7t-zWF" id="3Hy-fF-1gO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,19 +36,52 @@
                     <rect key="frame" x="0.0" y="175" width="375" height="492"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihL-XB-gNw">
+                    <rect key="frame" x="0.0" y="175" width="375" height="492"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nkT-y4-j18">
+                            <rect key="frame" x="137.5" y="115.5" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="loM-Yw-F6D"/>
+                                <constraint firstAttribute="height" constant="100" id="top-z2-53e"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La1-X3-bFF">
+                            <rect key="frame" x="16" y="245.5" width="343" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="La1-X3-bFF" firstAttribute="leading" secondItem="ihL-XB-gNw" secondAttribute="leading" constant="16" id="47e-FR-tTU"/>
+                        <constraint firstAttribute="trailing" secondItem="La1-X3-bFF" secondAttribute="trailing" constant="16" id="Boe-as-87h"/>
+                        <constraint firstItem="nkT-y4-j18" firstAttribute="centerX" secondItem="ihL-XB-gNw" secondAttribute="centerX" id="H9P-MV-Abf"/>
+                        <constraint firstItem="La1-X3-bFF" firstAttribute="top" secondItem="nkT-y4-j18" secondAttribute="bottom" constant="30" id="VWS-dR-PqV"/>
+                        <constraint firstItem="La1-X3-bFF" firstAttribute="centerY" secondItem="ihL-XB-gNw" secondAttribute="centerY" constant="10" id="y65-1D-Fwr"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="ihL-XB-gNw" firstAttribute="top" secondItem="d8g-d5-h5S" secondAttribute="bottom" id="3mX-SL-W1o"/>
                 <constraint firstAttribute="trailing" secondItem="d8g-d5-h5S" secondAttribute="trailing" id="7mK-HE-ytd"/>
+                <constraint firstItem="ihL-XB-gNw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9rx-PQ-qVp"/>
                 <constraint firstItem="ZwV-7t-zWF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HJg-VE-JeZ"/>
                 <constraint firstItem="d8g-d5-h5S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MHS-9U-0WE"/>
                 <constraint firstItem="d8g-d5-h5S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ogx-le-nlg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZwV-7t-zWF" secondAttribute="bottom" id="VOI-y9-w9B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ihL-XB-gNw" secondAttribute="bottom" id="Y1H-91-gsl"/>
                 <constraint firstItem="ZwV-7t-zWF" firstAttribute="top" secondItem="d8g-d5-h5S" secondAttribute="bottom" id="ihY-X9-WOe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ihL-XB-gNw" secondAttribute="trailing" id="mLs-rY-msy"/>
                 <constraint firstAttribute="trailing" secondItem="ZwV-7t-zWF" secondAttribute="trailing" id="w8P-B9-YaF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
+    <resources>
+        <image name="error_icon" width="980" height="814"/>
+    </resources>
 </document>

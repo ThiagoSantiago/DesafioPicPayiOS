@@ -10,6 +10,7 @@ import Foundation
 
 protocol ContactListInteractorProtocol {
     func getUsersList()
+    func searchUsers(name: String)
 }
 
 class ContactListInteractor: ContactListInteractorProtocol {
@@ -24,6 +25,7 @@ class ContactListInteractor: ContactListInteractorProtocol {
     }
     
     func getUsersList() {
+        presenter?.presentLoadingView()
         worker?.getUsersList(success: { result in
             self.presenter?.closeLoadingView()
             let viewModel = self.treatResultData(result: result)
@@ -34,8 +36,14 @@ class ContactListInteractor: ContactListInteractorProtocol {
         })
     }
     
+    func searchUsers(name: String) {
+        worker?.seachUser(name: name, completion: { reuslt in
+            let viewModel = self.treatResultData(result: reuslt)
+            self.presenter?.presentUsers(list: viewModel)
+        })
+    }
+    
     private func treatResultData(result: UsersList) -> [UserViewModel] {
-        
         return result.map { UserViewModel(name: $0.name,
                                           img: $0.img,
                                           username: $0.username)}

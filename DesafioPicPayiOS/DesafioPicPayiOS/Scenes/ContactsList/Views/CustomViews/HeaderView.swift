@@ -12,8 +12,8 @@ class HeaderView: UIView {
     
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var searchbar: UITextField!
-
+    @IBOutlet weak var searchbar: UITextField!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -24,7 +24,7 @@ class HeaderView: UIView {
         commonInit()
     }
 
-    func commonInit(){
+   private func commonInit(){
         Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)
         addSubview(contentView)
         
@@ -44,16 +44,9 @@ class HeaderView: UIView {
         }
         
         searchbar.leftView = searchActive
-        searchbar.delegate = self
-    }
-}
-
-extension HeaderView: UITextFieldDelegate {
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
-        searchbar.changeLayoutBy(state: .active)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        searchbar.changeLayoutBy(state: .inactive)
+    func setDelegate(delegate: UITextFieldDelegate) {
+         searchbar.delegate = delegate
     }
 }

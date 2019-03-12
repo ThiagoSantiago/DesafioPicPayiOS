@@ -16,7 +16,10 @@ protocol ContactListProtocol: class {
 }
 
 
-class ContactsListViewController: UIViewController {
+class ContactsListViewController: BaseViewController {
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
@@ -41,12 +44,16 @@ class ContactsListViewController: UIViewController {
 
         configViews()
         interactor?.getUsersList()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
     }
 
     private func configViews() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.headerView.setDelegate(delegate: self)
         self.headerHeightConstraint.constant = self.maxHeight
         
         registerTableViewCells()
@@ -54,6 +61,10 @@ class ContactsListViewController: UIViewController {
     
     private func registerTableViewCells() {
         self.tableView.register(UINib(nibName: "ContactListCell", bundle: nil), forCellReuseIdentifier: "ContactListCell")
+    }
+    
+    @objc private func dismissKeyboard() {
+        headerView.searchbar.resignFirstResponder()
     }
 }
 
@@ -151,19 +162,44 @@ extension ContactsListViewController: UITableViewDelegate {
 
 extension ContactsListViewController: ContactListProtocol {
     func hideLoadingView() {
-        // implement the hideLoadingView
+        self.hideLoader()
     }
     
     func displayLoadingView() {
-        // implement the displayLoadingView
+        self.showLoader()
     }
     
     func displayError(_ message: String) {
-        // implement the displayError
+        errorView.isHidden = false
+        tableView.isHidden = true
+        headerView.searchbar.isEnabled = false
+        
+        errorMessage.text = message
     }
     
     func displayUsers(_ list: [UserViewModel]) {
+        errorView.isHidden = true
+        tableView.isHidden = false
+        headerView.searchbar.isEnabled = true
+        
         self.tableViewData = list
         self.tableView.reloadData()
+    }
+}
+
+extension ContactsListViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string)
+        interactor?.searchUsers(name: updatedString ?? "")
+        return true
+    }
+    
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        headerView.searchbar.changeLayoutBy(state: .active)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        headerView.searchbar.changeLayoutBy(state: .inactive)
     }
 }
