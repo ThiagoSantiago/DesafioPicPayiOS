@@ -30,6 +30,7 @@
 		18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA722376868003F0F4A /* UserViewModel.swift */; };
 		18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */; };
 		18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */; };
+		18A24EAE22380B33003F0F4A /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		18A24EA722376868003F0F4A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +158,8 @@
 		18A24E7D22372CEF003F0F4A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18A24EAF22381583003F0F4A /* Extensions */,
 				18A24E9A22376001003F0F4A /* Constants.swift */,
-				18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -241,6 +243,15 @@
 				18A24EA722376868003F0F4A /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18A24EAF22381583003F0F4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */,
+				18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +369,7 @@
 				18A24E9922375F02003F0F4A /* PicPayContactListServiceSetup.swift in Sources */,
 				18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */,
 				18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */,
+				18A24EAE22380B33003F0F4A /* UITextField+Extensions.swift in Sources */,
 				18A24E9F22376429003F0F4A /* ContactListInteractor.swift in Sources */,
 				18A24E9522375E34003F0F4A /* PicPayApiRequest.swift in Sources */,
 				18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */,

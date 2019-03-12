@@ -31,30 +31,29 @@ class HeaderView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
-        let attachment = NSTextAttachment()
-        attachment.image = UIImage(named: "search_icon")
-        attachment.bounds = CGRect(x: 0, y: -3, width: 15, height: 15)
-        let attachmentStr = NSAttributedString(attachment: attachment)
-        let myString = NSMutableAttributedString(string: "")
-        myString.append(attachmentStr)
-        let myString1 = NSMutableAttributedString(string: "  A quem você deseja pagar?")
-        myString.append(myString1)
-        searchbar.attributedPlaceholder = myString
-        
         searchbar.layer.cornerRadius = 20
+        searchbar.addPlaceholderWith(imageName: "search_icon", text: "  A quem você deseja pagar?")
+        
+        let searchActive = UIImageView(image: UIImage(named: "search_active_icon")).paddingImageContent()
+        let clearImage = UIImage(named: "icon_clear")?.imageResize(sizeChange: CGSize(width: 10.0, height: 10.0))
+        
+        if let clearButton = searchbar.value(forKeyPath: "_clearButton") as? UIButton {
+            clearButton.frame = CGRect(x: 0.0, y: 0.0, width: 10, height: 10)
+            clearButton.setImage(clearImage, for: .normal)
+            clearButton.setImage(clearImage, for: .highlighted)
+        }
+        
+        searchbar.leftView = searchActive
+        searchbar.delegate = self
+    }
+}
+
+extension HeaderView: UITextFieldDelegate {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchbar.changeLayoutBy(state: .active)
     }
     
-//    private func searchBarCenterInit(){
-//        if let searchBarTextField = searchbar.value(forKey: "searchField") as? UITextField {
-//
-//            //Center search text
-////            searchBarTextField.textAlignment = .center
-//
-//            //Center placeholder
-//            let width = searchbar.frame.width / 2 - (searchBarTextField.attributedPlaceholder?.size().width)!
-//            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: searchbar.frame.height))
-//            searchBarTextField.leftView = paddingView
-//            searchBarTextField.leftViewMode = .unlessEditing
-//        }
-//    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        searchbar.changeLayoutBy(state: .inactive)
+    }
 }
