@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="eEf-M2-gkK" id="Udi-aO-TQz"/>
-                <outlet property="searchbar" destination="K23-ro-jrw" id="FgG-Wv-u7z"/>
+                <outlet property="searchbar" destination="YjD-8t-VbA" id="e6d-su-0Nt"/>
                 <outlet property="titleLabel" destination="849-ao-3GY" id="5VG-bC-8dr"/>
             </connections>
         </placeholder>
@@ -23,27 +23,39 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contatos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="849-ao-3GY">
-                    <rect key="frame" x="16" y="53.5" width="162.5" height="45.5"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                    <rect key="frame" x="16" y="61" width="120.5" height="33.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysq-ZB-7OY">
                     <rect key="frame" x="0.0" y="95" width="446" height="80"/>
                     <subviews>
-                        <searchBar contentMode="redraw" restorationIdentifier="searchField" searchBarStyle="minimal" placeholder="A quem você deseja pagar?" translatesAutoresizingMaskIntoConstraints="NO" id="K23-ro-jrw">
-                            <rect key="frame" x="0.0" y="14" width="446" height="56"/>
-                            <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                        </searchBar>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="A quem você deseja pagar?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YjD-8t-VbA">
+                            <rect key="frame" x="16" y="20" width="414" height="40"/>
+                            <color key="backgroundColor" red="0.16862745098039217" green="0.17254901960784313" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="6De-V8-jM5"/>
+                            </constraints>
+                            <color key="textColor" red="0.67450980392156867" green="0.69411764705882351" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" red="0.67450980392156867" green="0.69411764705882351" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="placeholderLabel.textSize">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="K23-ro-jrw" firstAttribute="trailing" secondItem="ysq-ZB-7OY" secondAttribute="trailing" id="HL9-SN-grX"/>
-                        <constraint firstItem="K23-ro-jrw" firstAttribute="leading" secondItem="ysq-ZB-7OY" secondAttribute="leading" id="IuU-EY-nhY"/>
-                        <constraint firstAttribute="bottom" secondItem="K23-ro-jrw" secondAttribute="bottom" constant="10" id="TGn-tu-dY3"/>
+                        <constraint firstItem="YjD-8t-VbA" firstAttribute="centerY" secondItem="ysq-ZB-7OY" secondAttribute="centerY" id="6xl-CI-7cK"/>
+                        <constraint firstItem="YjD-8t-VbA" firstAttribute="leading" secondItem="ysq-ZB-7OY" secondAttribute="leading" constant="16" id="KwT-qC-qYU"/>
                         <constraint firstAttribute="height" constant="80" id="eNV-2h-fep"/>
+                        <constraint firstAttribute="trailing" secondItem="YjD-8t-VbA" secondAttribute="trailing" constant="16" id="tep-Mv-sc3"/>
                     </constraints>
                 </view>
             </subviews>
@@ -53,7 +65,7 @@
                 <constraint firstItem="ysq-ZB-7OY" firstAttribute="leading" secondItem="rLI-Tt-tKv" secondAttribute="leading" id="HWA-RH-yUc"/>
                 <constraint firstItem="849-ao-3GY" firstAttribute="leading" secondItem="rLI-Tt-tKv" secondAttribute="leading" constant="16" id="XYm-FP-5zT"/>
                 <constraint firstItem="ysq-ZB-7OY" firstAttribute="bottom" secondItem="rLI-Tt-tKv" secondAttribute="bottom" id="fre-uJ-duG"/>
-                <constraint firstItem="849-ao-3GY" firstAttribute="top" secondItem="eEf-M2-gkK" secondAttribute="top" constant="53.5" id="qt3-WQ-soX"/>
+                <constraint firstItem="849-ao-3GY" firstAttribute="top" secondItem="eEf-M2-gkK" secondAttribute="top" constant="61" id="qt3-WQ-soX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="rLI-Tt-tKv"/>

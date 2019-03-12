@@ -26,12 +26,13 @@ class ContactListCell: UITableViewCell {
     }
     
     private func configViews() {
-        userImage.layer.cornerRadius = 35
+        userImage.layer.cornerRadius = 30
     }
     
     func setContent(user: UserViewModel) {
-        self.userName.text = user.name
-        self.userNickname.text = user.username
+        userName.text = user.name
+        userNickname.text = user.username
+        userImage.loadImage(from: user.img)
     }
     
 }

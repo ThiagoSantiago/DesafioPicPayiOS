@@ -28,6 +28,8 @@
 		18A24EA2223764D5003F0F4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA1223764D5003F0F4A /* User.swift */; };
 		18A24EA5223765F0003F0F4A /* ContactListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA4223765F0003F0F4A /* ContactListWorker.swift */; };
 		18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA722376868003F0F4A /* UserViewModel.swift */; };
+		18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */; };
+		18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		18A24EA1223764D5003F0F4A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		18A24EA4223765F0003F0F4A /* ContactListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListWorker.swift; sourceTree = "<group>"; };
 		18A24EA722376868003F0F4A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 				18A24E9422375E34003F0F4A /* PicPayApiRequest.swift */,
 				18A24E9622375E8C003F0F4A /* PicPayApiSetupProtocol.swift */,
 				18A24E9822375F02003F0F4A /* PicPayContactListServiceSetup.swift */,
+				18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				18A24E9A22376001003F0F4A /* Constants.swift */,
+				18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -350,11 +356,13 @@
 				18A24E9B22376001003F0F4A /* Constants.swift in Sources */,
 				18A24EA5223765F0003F0F4A /* ContactListWorker.swift in Sources */,
 				18A24E9922375F02003F0F4A /* PicPayContactListServiceSetup.swift in Sources */,
+				18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */,
 				18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */,
 				18A24E9F22376429003F0F4A /* ContactListInteractor.swift in Sources */,
 				18A24E9522375E34003F0F4A /* PicPayApiRequest.swift in Sources */,
 				18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */,
 				18A24E8B223731D3003F0F4A /* HeaderView.swift in Sources */,
+				18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
