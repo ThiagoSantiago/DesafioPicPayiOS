@@ -9,5 +9,5 @@
 import Foundation
 
 class Constants {
-    static let baseUrl = " http://careers.picpay.com"
+    static let baseUrl = "http://careers.picpay.com"
 }

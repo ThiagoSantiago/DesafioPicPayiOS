@@ -18,7 +18,7 @@ protocol PicPayApiRequestProtocol {
     func request(_ request: PicPayApiSetupProtocol, completion: @escaping (Result<Data>) -> Void)
 }
 
-class MovieTouchApiRequest: PicPayApiRequestProtocol {
+class PicPayApiRequest: PicPayApiRequestProtocol {
     
     func request(_ request: PicPayApiSetupProtocol, completion: @escaping (Result<Data>) -> Void) {
         

@@ -16,7 +16,7 @@ enum PicPayContactListServiceSetup: PicPayApiSetupProtocol {
         switch self {
             
         case .getUsers():
-            let url = Constants.baseUrl + "/tests/mobdev/users"
+            let url = Constants.baseUrl+"/tests/mobdev/users"
             
             return url
         }

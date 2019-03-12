@@ -11,7 +11,7 @@ import UIKit
 class ContactListCell: UITableViewCell {
     
     @IBOutlet private weak var userName: UILabel!
-    @IBOutlet weak var userNickname: UILabel!
+    @IBOutlet private weak var userNickname: UILabel!
     @IBOutlet private weak var userImage: UIImageView!
     
 
@@ -27,6 +27,11 @@ class ContactListCell: UITableViewCell {
     
     private func configViews() {
         userImage.layer.cornerRadius = 35
+    }
+    
+    func setContent(user: UserViewModel) {
+        self.userName.text = user.name
+        self.userNickname.text = user.username
     }
     
 }

@@ -15,12 +15,12 @@ class AppRouter {
     var navigation: UINavigationController = UINavigationController()
     
     func routeToHome() {
-//        let presenter = UpcomingMoviesPresenter()
-//        let interactor = UpcomingMoviesInteractor(presenter: presenter)
+        let presenter = ContactListPresenter()
+        let interactor = ContactListInteractor(presenter: presenter)
         self.navigation.navigationBar.isHidden = true
-        let viewController = ContactsListViewController()
+        let viewController = ContactsListViewController(interactor: interactor)
         
-//        presenter.viewController = viewController
+        presenter.viewController = viewController
         self.navigation.pushViewController(viewController, animated: false)
     }
     
