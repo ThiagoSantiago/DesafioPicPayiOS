@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8B2238643C00F27019 /* BaseViewController.swift */; };
+		1848BC902238783700F27019 /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8F2238783700F27019 /* NewCardViewController.swift */; };
+		1848BC922238787C00F27019 /* NewCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848BC912238787C00F27019 /* NewCardViewController.xib */; };
 		18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E5B2237231F003F0F4A /* AppDelegate.swift */; };
 		18A24E6322372323003F0F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6222372323003F0F4A /* Assets.xcassets */; };
 		18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6422372323003F0F4A /* LaunchScreen.storyboard */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		1848BC8B2238643C00F27019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1848BC8F2238783700F27019 /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
+		1848BC912238787C00F27019 /* NewCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCardViewController.xib; sourceTree = "<group>"; };
 		18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioPicPayiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A24E5B2237231F003F0F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A24E6222372323003F0F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1848BC8D223877B200F27019 /* RegisterCard */ = {
+			isa = PBXGroup;
+			children = (
+				1848BC8E2238781700F27019 /* Views */,
+			);
+			path = RegisterCard;
+			sourceTree = "<group>";
+		};
+		1848BC8E2238781700F27019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1848BC8F2238783700F27019 /* NewCardViewController.swift */,
+				1848BC912238787C00F27019 /* NewCardViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		18A24E4F2237231F003F0F4A = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				18A24E8122372D90003F0F4A /* ContactsList */,
+				1848BC8D223877B200F27019 /* RegisterCard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -339,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */,
+				1848BC922238787C00F27019 /* NewCardViewController.xib in Resources */,
 				18A24E6322372323003F0F4A /* Assets.xcassets in Resources */,
 				18A24E8822372EC7003F0F4A /* ContactsListViewController.xib in Resources */,
 				18A24E9122373F38003F0F4A /* ContactListCell.xib in Resources */,
@@ -361,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A24EA2223764D5003F0F4A /* User.swift in Sources */,
+				1848BC902238783700F27019 /* NewCardViewController.swift in Sources */,
 				18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */,
 				18A24E9D22376334003F0F4A /* ContactListPresenter.swift in Sources */,
 				18A24E9022373F38003F0F4A /* ContactListCell.swift in Sources */,

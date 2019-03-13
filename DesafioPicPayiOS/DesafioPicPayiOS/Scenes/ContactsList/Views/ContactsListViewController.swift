@@ -44,9 +44,9 @@ class ContactsListViewController: BaseViewController {
 
         configViews()
         interactor?.getUsersList()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+//
+//        view.addGestureRecognizer(tap)
     }
 
     private func configViews() {
@@ -82,10 +82,13 @@ extension ContactsListViewController: UITableViewDataSource {
         
         return cell
     }
-    
 }
 
 extension ContactsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppRouter.shared.routeToNewCard()
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
         let absoluteTop: CGFloat = 0;

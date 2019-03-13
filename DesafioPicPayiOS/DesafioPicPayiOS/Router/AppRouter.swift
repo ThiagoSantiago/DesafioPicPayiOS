@@ -24,6 +24,12 @@ class AppRouter {
         self.navigation.pushViewController(viewController, animated: false)
     }
     
+    func routeToNewCard() {
+        
+        let viewController = NewCardViewController()
+        self.navigation.pushViewController(viewController, animated: true)
+    }
+    
     func popViewController() {
         self.navigation.popViewController(animated: true)
     }
