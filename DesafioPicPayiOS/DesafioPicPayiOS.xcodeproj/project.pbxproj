@@ -10,6 +10,9 @@
 		1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8B2238643C00F27019 /* BaseViewController.swift */; };
 		1848BC902238783700F27019 /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8F2238783700F27019 /* NewCardViewController.swift */; };
 		1848BC922238787C00F27019 /* NewCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848BC912238787C00F27019 /* NewCardViewController.xib */; };
+		1848BC9422388D8100F27019 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC9322388D8100F27019 /* FloatingTextField.swift */; };
+		1848BC9722388F8300F27019 /* RegisterNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC9522388F8300F27019 /* RegisterNewCardViewController.swift */; };
+		1848BC9822388F8300F27019 /* RegisterNewCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848BC9622388F8300F27019 /* RegisterNewCardViewController.xib */; };
 		18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E5B2237231F003F0F4A /* AppDelegate.swift */; };
 		18A24E6322372323003F0F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6222372323003F0F4A /* Assets.xcassets */; };
 		18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6422372323003F0F4A /* LaunchScreen.storyboard */; };
@@ -50,6 +53,9 @@
 		1848BC8B2238643C00F27019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1848BC8F2238783700F27019 /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
 		1848BC912238787C00F27019 /* NewCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCardViewController.xib; sourceTree = "<group>"; };
+		1848BC9322388D8100F27019 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		1848BC9522388F8300F27019 /* RegisterNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewCardViewController.swift; sourceTree = "<group>"; };
+		1848BC9622388F8300F27019 /* RegisterNewCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterNewCardViewController.xib; sourceTree = "<group>"; };
 		18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioPicPayiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A24E5B2237231F003F0F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A24E6222372323003F0F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 			children = (
 				1848BC8F2238783700F27019 /* NewCardViewController.swift */,
 				1848BC912238787C00F27019 /* NewCardViewController.xib */,
+				1848BC9522388F8300F27019 /* RegisterNewCardViewController.swift */,
+				1848BC9622388F8300F27019 /* RegisterNewCardViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 				18A24EAF22381583003F0F4A /* Extensions */,
 				18A24E9A22376001003F0F4A /* Constants.swift */,
 				1848BC8B2238643C00F27019 /* BaseViewController.swift */,
+				1848BC9322388D8100F27019 /* FloatingTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -362,6 +371,7 @@
 			files = (
 				18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */,
 				1848BC922238787C00F27019 /* NewCardViewController.xib in Resources */,
+				1848BC9822388F8300F27019 /* RegisterNewCardViewController.xib in Resources */,
 				18A24E6322372323003F0F4A /* Assets.xcassets in Resources */,
 				18A24E8822372EC7003F0F4A /* ContactsListViewController.xib in Resources */,
 				18A24E9122373F38003F0F4A /* ContactListCell.xib in Resources */,
@@ -387,6 +397,7 @@
 				1848BC902238783700F27019 /* NewCardViewController.swift in Sources */,
 				18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */,
 				18A24E9D22376334003F0F4A /* ContactListPresenter.swift in Sources */,
+				1848BC9422388D8100F27019 /* FloatingTextField.swift in Sources */,
 				18A24E9022373F38003F0F4A /* ContactListCell.swift in Sources */,
 				1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */,
 				18A24E9722375E8C003F0F4A /* PicPayApiSetupProtocol.swift in Sources */,
@@ -400,6 +411,7 @@
 				18A24EAE22380B33003F0F4A /* UITextField+Extensions.swift in Sources */,
 				18A24E9F22376429003F0F4A /* ContactListInteractor.swift in Sources */,
 				18A24E9522375E34003F0F4A /* PicPayApiRequest.swift in Sources */,
+				1848BC9722388F8300F27019 /* RegisterNewCardViewController.swift in Sources */,
 				18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */,
 				18A24E8B223731D3003F0F4A /* HeaderView.swift in Sources */,
 				18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */,

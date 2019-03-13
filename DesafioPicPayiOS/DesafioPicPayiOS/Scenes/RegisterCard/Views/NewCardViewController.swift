@@ -20,7 +20,6 @@ class NewCardViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +31,6 @@ class NewCardViewController: UIViewController {
     }
     
     @IBAction func registerNewCardPressed(_ sender: Any) {
-        AppRouter.shared.routeToHome()
+        AppRouter.shared.routeToRegisterNewCard()
     }
 }

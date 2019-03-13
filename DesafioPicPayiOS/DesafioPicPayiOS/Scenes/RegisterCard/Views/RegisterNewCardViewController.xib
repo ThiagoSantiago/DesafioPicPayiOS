@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterNewCardViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
+            <connections>
+                <outlet property="cardNumber" destination="EoW-RU-B7b" id="T8q-Bk-XVs"/>
+                <outlet property="cardOwnerName" destination="kHe-VF-dip" id="Qe9-ZL-DZd"/>
+                <outlet property="expirationDate" destination="jnv-4D-yCE" id="zpq-Q8-Mpj"/>
+                <outlet property="saveButton" destination="YeH-zI-2mr" id="S1r-Db-sVr"/>
+                <outlet property="securityCode" destination="Aib-mK-e6b" id="BWG-nf-qEi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9l-4s-8uh">
+                    <rect key="frame" x="12" y="30" width="12" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="18d-dW-tYT"/>
+                        <constraint firstAttribute="height" constant="20" id="Beq-iy-6qM"/>
+                    </constraints>
+                    <state key="normal" image="back_button"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="vYd-DN-q0a"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRo-Kk-UGU">
+                    <rect key="frame" x="20" y="80" width="335" height="33.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoW-RU-B7b" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                    <rect key="frame" x="20" y="173.5" width="335" height="30"/>
+                    <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-VF-dip" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                    <rect key="frame" x="20" y="263.5" width="335" height="30"/>
+                    <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uv5-qd-vln">
+                    <rect key="frame" x="20" y="353.5" width="335" height="30"/>
+                    <subviews>
+                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnv-4D-yCE" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="30"/>
+                            <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aib-mK-e6b" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                            <rect key="frame" x="177.5" y="0.0" width="157.5" height="30"/>
+                            <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-zI-2mr">
+                    <rect key="frame" x="12" y="605" width="351" height="50"/>
+                    <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="npd-Jy-sCO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Salvar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="saveCardPressed:" destination="-1" eventType="touchUpInside" id="64o-fe-8Wj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YeH-zI-2mr" secondAttribute="trailing" constant="12" id="0De-Xt-20Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kHe-VF-dip" secondAttribute="trailing" constant="20" id="8ve-FZ-S5X"/>
+                <constraint firstItem="MRo-Kk-UGU" firstAttribute="top" secondItem="E9l-4s-8uh" secondAttribute="bottom" constant="30" id="CU7-6K-6Cx"/>
+                <constraint firstItem="E9l-4s-8uh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="D7O-e6-HF6"/>
+                <constraint firstItem="kHe-VF-dip" firstAttribute="top" secondItem="EoW-RU-B7b" secondAttribute="bottom" constant="60" id="GBN-SM-MGw"/>
+                <constraint firstItem="YeH-zI-2mr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="JDD-dy-KQN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uv5-qd-vln" secondAttribute="trailing" constant="20" id="Jey-Co-pZL"/>
+                <constraint firstItem="EoW-RU-B7b" firstAttribute="top" secondItem="MRo-Kk-UGU" secondAttribute="bottom" constant="60" id="NiT-y1-UcN"/>
+                <constraint firstItem="E9l-4s-8uh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Oxw-Ll-2TJ"/>
+                <constraint firstItem="Uv5-qd-vln" firstAttribute="top" secondItem="kHe-VF-dip" secondAttribute="bottom" constant="60" id="Q78-FS-oZ1"/>
+                <constraint firstItem="MRo-Kk-UGU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="T0o-oc-LTb"/>
+                <constraint firstItem="kHe-VF-dip" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hxe-lU-NxP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MRo-Kk-UGU" secondAttribute="trailing" constant="20" id="iMh-uX-j2j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YeH-zI-2mr" secondAttribute="bottom" constant="12" id="kvA-1R-kwJ"/>
+                <constraint firstItem="Uv5-qd-vln" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nmT-3Z-WKR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EoW-RU-B7b" secondAttribute="trailing" constant="20" id="oE9-ds-155"/>
+                <constraint firstItem="EoW-RU-B7b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tWO-hd-RH6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_button" width="13" height="20"/>
+    </resources>
+</document>

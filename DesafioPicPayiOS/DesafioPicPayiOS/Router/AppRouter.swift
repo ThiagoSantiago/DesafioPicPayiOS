@@ -25,8 +25,12 @@ class AppRouter {
     }
     
     func routeToNewCard() {
-        
         let viewController = NewCardViewController()
+        self.navigation.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToRegisterNewCard() {
+        let viewController = RegisterNewCardViewController()
         self.navigation.pushViewController(viewController, animated: true)
     }
     
