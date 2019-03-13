@@ -27,6 +27,10 @@ class ContactListCell: UITableViewCell {
     
     private func configViews() {
         userImage.layer.cornerRadius = 30
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor(red: 0.07, green: 0.78, blue: 0.44, alpha: 1)
+        self.selectedBackgroundView = bgColorView
     }
     
     func setContent(user: UserViewModel) {

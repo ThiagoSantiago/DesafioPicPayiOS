@@ -175,7 +175,12 @@ class FloatingTextField: UITextField {
     private func placeholder(toFloat: Bool) {
         isFloat = toFloat
         floatingPlaceholderBottomConstraint.constant = toFloat ? -bounds.height + floatingPlaceholderLabel.frame.height : -floatingPlaceholderBottomMargin
-
+        if isFloat {
+            floatingPlaceholderLabel.textColor = UIColor(red: 0.07, green: 0.78, blue: 0.44, alpha: 1)
+        } else {
+            floatingPlaceholderLabel.textColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+        }
+        
         shouldFloat = true
     }
     
