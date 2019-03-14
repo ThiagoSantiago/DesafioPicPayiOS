@@ -37,6 +37,13 @@
 		18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */; };
 		18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */; };
 		18A24EAE22380B33003F0F4A /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */; };
+		18BD4D202239EC0D00A7CBBE /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */; };
+		18BD4D272239F8D200A7CBBE /* PaymentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D262239F8D200A7CBBE /* PaymentWorker.swift */; };
+		18BD4D292239F90600A7CBBE /* PicPayPaymentServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D282239F90600A7CBBE /* PicPayPaymentServiceSetup.swift */; };
+		18BD4D2B2239FBE800A7CBBE /* PaymentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2A2239FBE800A7CBBE /* PaymentInteractor.swift */; };
+		18BD4D2D2239FCF600A7CBBE /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2C2239FCF600A7CBBE /* PaymentPresenter.swift */; };
+		18BD4D302239FD8700A7CBBE /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */; };
+		18BD4D312239FD8700A7CBBE /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +91,13 @@
 		18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		18BD4D262239F8D200A7CBBE /* PaymentWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWorker.swift; sourceTree = "<group>"; };
+		18BD4D282239F90600A7CBBE /* PicPayPaymentServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPayPaymentServiceSetup.swift; sourceTree = "<group>"; };
+		18BD4D2A2239FBE800A7CBBE /* PaymentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInteractor.swift; sourceTree = "<group>"; };
+		18BD4D2C2239FCF600A7CBBE /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
+		18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				18A24E8122372D90003F0F4A /* ContactsList */,
+				18BD4D212239F83800A7CBBE /* Payment */,
 				1848BC8D223877B200F27019 /* RegisterCard */,
 			);
 			path = Scenes;
@@ -183,6 +198,7 @@
 				18A24E9622375E8C003F0F4A /* PicPayApiSetupProtocol.swift */,
 				18A24E9822375F02003F0F4A /* PicPayContactListServiceSetup.swift */,
 				18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */,
+				18BD4D282239F90600A7CBBE /* PicPayPaymentServiceSetup.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -194,6 +210,7 @@
 				18A24E9A22376001003F0F4A /* Constants.swift */,
 				1848BC8B2238643C00F27019 /* BaseViewController.swift */,
 				1848BC9322388D8100F27019 /* FloatingTextField.swift */,
+				18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				18A24EA4223765F0003F0F4A /* ContactListWorker.swift */,
+				18BD4D262239F8D200A7CBBE /* PaymentWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -286,6 +304,49 @@
 				18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18BD4D212239F83800A7CBBE /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				18BD4D232239F88300A7CBBE /* Interactor */,
+				18BD4D222239F86F00A7CBBE /* Model */,
+				18BD4D242239F88D00A7CBBE /* Presenter */,
+				18BD4D252239F89600A7CBBE /* Views */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		18BD4D222239F86F00A7CBBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD4D232239F88300A7CBBE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				18BD4D2A2239FBE800A7CBBE /* PaymentInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		18BD4D242239F88D00A7CBBE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18BD4D2C2239FCF600A7CBBE /* PaymentPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18BD4D252239F89600A7CBBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */,
+				18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +437,7 @@
 				18A24E8822372EC7003F0F4A /* ContactsListViewController.xib in Resources */,
 				18A24E9122373F38003F0F4A /* ContactListCell.xib in Resources */,
 				18A24E8D223731EF003F0F4A /* HeaderView.xib in Resources */,
+				18BD4D312239FD8700A7CBBE /* PaymentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +459,16 @@
 				1848BC902238783700F27019 /* NewCardViewController.swift in Sources */,
 				18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */,
 				18A24E9D22376334003F0F4A /* ContactListPresenter.swift in Sources */,
+				18BD4D2D2239FCF600A7CBBE /* PaymentPresenter.swift in Sources */,
 				1848BC9422388D8100F27019 /* FloatingTextField.swift in Sources */,
 				18A24E9022373F38003F0F4A /* ContactListCell.swift in Sources */,
+				18BD4D302239FD8700A7CBBE /* PaymentViewController.swift in Sources */,
+				18BD4D272239F8D200A7CBBE /* PaymentWorker.swift in Sources */,
 				1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */,
+				18BD4D202239EC0D00A7CBBE /* KeychainService.swift in Sources */,
+				18BD4D292239F90600A7CBBE /* PicPayPaymentServiceSetup.swift in Sources */,
 				18A24E9722375E8C003F0F4A /* PicPayApiSetupProtocol.swift in Sources */,
+				18BD4D2B2239FBE800A7CBBE /* PaymentInteractor.swift in Sources */,
 				18A24E8022372D1E003F0F4A /* AppRouter.swift in Sources */,
 				18A24E9322375DF9003F0F4A /* PicPayApiError.swift in Sources */,
 				18A24E9B22376001003F0F4A /* Constants.swift in Sources */,

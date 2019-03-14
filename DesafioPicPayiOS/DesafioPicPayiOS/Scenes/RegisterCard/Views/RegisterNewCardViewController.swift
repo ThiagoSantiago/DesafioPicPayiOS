@@ -81,7 +81,7 @@ class RegisterNewCardViewController: UIViewController {
     }
     
     @IBAction func saveCardPressed(_ sender: Any) {
-        AppRouter.shared.routeToHome()
+        AppRouter.shared.routeToPayment()
     }
 }
 

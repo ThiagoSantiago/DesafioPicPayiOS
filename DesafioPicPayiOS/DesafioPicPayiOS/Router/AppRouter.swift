@@ -34,6 +34,15 @@ class AppRouter {
         self.navigation.pushViewController(viewController, animated: true)
     }
     
+    func routeToPayment() {
+        let presenter = PaymentPresenter()
+        let interactor = PaymentInteractor(presenter: presenter)
+        let viewController = PaymentViewController(interactor: interactor)
+        
+        presenter.viewController = viewController
+        self.navigation.pushViewController(viewController, animated: false)
+    }
+    
     func popViewController() {
         self.navigation.popViewController(animated: true)
     }
