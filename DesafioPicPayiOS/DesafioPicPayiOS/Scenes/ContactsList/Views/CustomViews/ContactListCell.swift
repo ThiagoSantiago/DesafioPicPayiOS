@@ -14,7 +14,6 @@ class ContactListCell: UITableViewCell {
     @IBOutlet private weak var userNickname: UILabel!
     @IBOutlet private weak var userImage: UIImageView!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         configViews()

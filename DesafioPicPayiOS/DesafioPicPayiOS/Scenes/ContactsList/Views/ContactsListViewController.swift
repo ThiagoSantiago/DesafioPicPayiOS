@@ -44,9 +44,9 @@ class ContactsListViewController: BaseViewController {
 
         configViews()
         interactor?.getUsersList()
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-//
-//        view.addGestureRecognizer(tap)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+
+        headerView.addGestureRecognizer(tap)
     }
 
     private func configViews() {
@@ -86,6 +86,7 @@ extension ContactsListViewController: UITableViewDataSource {
 
 extension ContactsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dismissKeyboard()
         AppRouter.shared.routeToNewCard()
     }
     

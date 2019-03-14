@@ -9,72 +9,33 @@
 import UIKit
 
 class FloatingTextField: UITextField {
-
-    /// Placeholder rising up when editing
     private var floatingPlaceholderLabel: UILabel = UILabel()
     
-    /// enable change to font
     open override var font: UIFont? {
         didSet {
             floatingPlaceholderLabel.font = font
         }
     }
     
-    /// Placeholder min font size
-    open var floatingPlaceholderMinFontSize: CGFloat = 14
-    
-    /// Placeholder animation duration
-    open var floatintPlaceholderDuration: Double = 0.2
-    
-    /// Placeholder color
-    open var floatingPlaceholderColor: UIColor = .lightGray
-    
-    /// Under line color when editing and validation is not ok
-    open var validationFalseLineEditingColor: UIColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
-    
-    /// Under line color when editing and validation is not ok
-    open var validationTrueLineEditingColor: UIColor = UIColor(red: 0.07, green: 0.78, blue: 0.44, alpha: 1)
-    
-    /// Under line color when not editing and validation is not ok
-    open var validationFalseLineColor: UIColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
-    
-    /// Under line color when not editing and validation is ok
-    open var validationTrueLineColor: UIColor = UIColor(red: 0.07, green: 0.78, blue: 0.44, alpha: 1)
-    
-    /// Validation function
-    open var validation: ((String) -> Bool)?
-    
-    /// Padding to the left of text
+    var floatingPlaceholderMinFontSize: CGFloat = 14
+    var floatintPlaceholderDuration: Double = 0.2
+    var floatingPlaceholderColor: UIColor = .lightGray
+    var validationFalseLineEditingColor: UIColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+    var validationTrueLineEditingColor: UIColor = UIColor(red: 0.07, green: 0.78, blue: 0.44, alpha: 1)
+    var validationFalseLineColor: UIColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+    var validationTrueLineColor: UIColor = UIColor(red: 0.07, green: 0.78, blue: 0.44, alpha: 1)
+    var validation: ((String) -> Bool)?
     private var leftPadding: CGFloat = 16
-    
-    /// Margin under placeholder when on top
     private var floatingPlaceholderBottomMargin: CGFloat = 9
-    
-    /// Placeholder Bottom Constraint
     private var floatingPlaceholderBottomConstraint: NSLayoutConstraint!
-    
-    /// Placeholder Leading Constraint
     private var floatingPlaceholderLeadingConstraint: NSLayoutConstraint!
-    
-    /// Under line width constraint
     private var underLineViewWidth: NSLayoutConstraint?
-    
-    /// Under line View
     private var underLineView: UIView?
-    
-    /// Now under line color
     private var underLineColor: UIColor?
-    
-    /// Old under line color
     private var oldUnderLineView: UIView?
-    
-    /// Whether placeholder is above
     private var isFloat = false
-    
-    /// Whether placehlder should be avove
     private var shouldFloat = false
     
-    /// set up size of self
     override open var intrinsicContentSize: CGSize {
         let intrinsicContentSize = super.intrinsicContentSize
         return CGSize(width: intrinsicContentSize.width,
@@ -95,16 +56,14 @@ class FloatingTextField: UITextField {
         super.layoutSubviews()
         invalidateIntrinsicContentSize()
         
-        // When editing is started in case character input is not made
         if isFirstResponder && text == "" && !isFloat {
             placeholder(toFloat: true)
         }
-            // When editing is ended when character input is not made
+        
         else if !isFirstResponder && text == "" && isFloat {
             placeholder(toFloat: false)
         }
         
-        // When an initial value is given to textfield
         if text != "" && !isFloat {
             isFloat = true
             DispatchQueue.main.async {
@@ -127,7 +86,6 @@ class FloatingTextField: UITextField {
         return CGRect(x: rect.origin.x, y: rect.origin.y + floatingPlaceholderBottomMargin, width: rect.size.width, height: rect.size.height).integral
     }
     
-    /// Initial set
     private func setup() {
         borderStyle = .none
         setupFloatingPlaceholder()
@@ -137,7 +95,6 @@ class FloatingTextField: UITextField {
         }
     }
     
-    /// Set up placeholder label
     private func setupFloatingPlaceholder() {
         floatingPlaceholderLabel.translatesAutoresizingMaskIntoConstraints = false
         floatingPlaceholderLabel.text = placeholder
@@ -151,7 +108,6 @@ class FloatingTextField: UITextField {
         floatingPlaceholderBottomConstraint.isActive = true
     }
     
-    /// Set up under view
     private func setupUnderLineView() {
         oldUnderLineView = UIView()
         oldUnderLineView?.translatesAutoresizingMaskIntoConstraints = false
@@ -171,7 +127,6 @@ class FloatingTextField: UITextField {
         underLineView?.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     
-    /// Move placeholder label
     private func placeholder(toFloat: Bool) {
         isFloat = toFloat
         floatingPlaceholderBottomConstraint.constant = toFloat ? -bounds.height + floatingPlaceholderLabel.frame.height : -floatingPlaceholderBottomMargin
@@ -184,7 +139,6 @@ class FloatingTextField: UITextField {
         shouldFloat = true
     }
     
-    /// change bottom line color
     private func changeBottomLineColor() {
         if underLineColor == nil {
             underLineColor = validationFalseLineColor
@@ -204,19 +158,16 @@ class FloatingTextField: UITextField {
         }
     }
     
-    /// Whether if validation ok
-    private func isVaridate() -> Bool {
+    func isVaridate() -> Bool {
         guard let text = text else { return false }
-        guard let validation = validation else { return true }
+        guard let validation = validation else { return false }
         return validation(text)
     }
     
-    /// Set bottom line with animation
     private func animateBottomLineColor() {
         underLineView?.backgroundColor = underLineColor
         underLineViewWidth?.constant = bounds.width
         
-        // placeholder size ratio
         let ratio = isFloat ? floatingPlaceholderMinFontSize / font!.pointSize : font!.pointSize / floatingPlaceholderMinFontSize
         UIView.animate(withDuration: floatintPlaceholderDuration, delay: 0, options: .curveLinear, animations: {
             self.layoutIfNeeded()

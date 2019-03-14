@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterNewCardViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
+                <outlet property="bottonButtonConstraint" destination="kvA-1R-kwJ" id="0Jc-c4-u2L"/>
                 <outlet property="cardNumber" destination="EoW-RU-B7b" id="T8q-Bk-XVs"/>
                 <outlet property="cardOwnerName" destination="kHe-VF-dip" id="Qe9-ZL-DZd"/>
                 <outlet property="expirationDate" destination="jnv-4D-yCE" id="zpq-Q8-Mpj"/>
@@ -56,26 +57,27 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uv5-qd-vln">
-                    <rect key="frame" x="20" y="353.5" width="335" height="30"/>
-                    <subviews>
-                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnv-4D-yCE" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="30"/>
-                            <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                        </textField>
-                        <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aib-mK-e6b" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
-                            <rect key="frame" x="177.5" y="0.0" width="157.5" height="30"/>
-                            <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                        </textField>
-                    </subviews>
-                </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-zI-2mr">
+                <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnv-4D-yCE" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                    <rect key="frame" x="20" y="353.5" width="157.5" height="30"/>
+                    <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="vRk-Z7-JCT"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aib-mK-e6b" customClass="FloatingTextField" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                    <rect key="frame" x="197.5" y="353.5" width="157.5" height="30"/>
+                    <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="1Eh-pj-5BQ"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-zI-2mr">
                     <rect key="frame" x="12" y="605" width="351" height="50"/>
                     <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -89,26 +91,39 @@
                         <action selector="saveCardPressed:" destination="-1" eventType="touchUpInside" id="64o-fe-8Wj"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHk-BI-v4n">
+                    <rect key="frame" x="187.5" y="353.5" width="0.0" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="VIu-34-E4b"/>
+                        <constraint firstAttribute="height" constant="30" id="pVw-DL-xoT"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YeH-zI-2mr" secondAttribute="trailing" constant="12" id="0De-Xt-20Q"/>
+                <constraint firstItem="QHk-BI-v4n" firstAttribute="top" secondItem="kHe-VF-dip" secondAttribute="bottom" constant="60" id="2rv-UE-LDC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kHe-VF-dip" secondAttribute="trailing" constant="20" id="8ve-FZ-S5X"/>
                 <constraint firstItem="MRo-Kk-UGU" firstAttribute="top" secondItem="E9l-4s-8uh" secondAttribute="bottom" constant="30" id="CU7-6K-6Cx"/>
                 <constraint firstItem="E9l-4s-8uh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="D7O-e6-HF6"/>
+                <constraint firstItem="QHk-BI-v4n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E8b-1G-naY"/>
                 <constraint firstItem="kHe-VF-dip" firstAttribute="top" secondItem="EoW-RU-B7b" secondAttribute="bottom" constant="60" id="GBN-SM-MGw"/>
                 <constraint firstItem="YeH-zI-2mr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="JDD-dy-KQN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uv5-qd-vln" secondAttribute="trailing" constant="20" id="Jey-Co-pZL"/>
                 <constraint firstItem="EoW-RU-B7b" firstAttribute="top" secondItem="MRo-Kk-UGU" secondAttribute="bottom" constant="60" id="NiT-y1-UcN"/>
                 <constraint firstItem="E9l-4s-8uh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Oxw-Ll-2TJ"/>
-                <constraint firstItem="Uv5-qd-vln" firstAttribute="top" secondItem="kHe-VF-dip" secondAttribute="bottom" constant="60" id="Q78-FS-oZ1"/>
                 <constraint firstItem="MRo-Kk-UGU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="T0o-oc-LTb"/>
+                <constraint firstItem="jnv-4D-yCE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aTj-hM-gVm"/>
+                <constraint firstItem="Aib-mK-e6b" firstAttribute="top" secondItem="kHe-VF-dip" secondAttribute="bottom" constant="60" id="b02-Hm-WkJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aib-mK-e6b" secondAttribute="trailing" constant="20" id="dRD-Mj-8dy"/>
                 <constraint firstItem="kHe-VF-dip" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hxe-lU-NxP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MRo-Kk-UGU" secondAttribute="trailing" constant="20" id="iMh-uX-j2j"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YeH-zI-2mr" secondAttribute="bottom" constant="12" id="kvA-1R-kwJ"/>
-                <constraint firstItem="Uv5-qd-vln" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nmT-3Z-WKR"/>
+                <constraint firstAttribute="bottom" secondItem="YeH-zI-2mr" secondAttribute="bottom" constant="12" id="kvA-1R-kwJ"/>
+                <constraint firstItem="jnv-4D-yCE" firstAttribute="top" secondItem="kHe-VF-dip" secondAttribute="bottom" constant="60" id="mO0-7W-5sD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EoW-RU-B7b" secondAttribute="trailing" constant="20" id="oE9-ds-155"/>
+                <constraint firstItem="Aib-mK-e6b" firstAttribute="leading" secondItem="QHk-BI-v4n" secondAttribute="trailing" constant="10" id="sAP-Gl-dGf"/>
                 <constraint firstItem="EoW-RU-B7b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tWO-hd-RH6"/>
+                <constraint firstItem="QHk-BI-v4n" firstAttribute="leading" secondItem="jnv-4D-yCE" secondAttribute="trailing" constant="10" id="vRX-Cd-DGr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
