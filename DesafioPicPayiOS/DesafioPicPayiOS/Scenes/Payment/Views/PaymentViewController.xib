@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
+                <outlet property="creditCard" destination="w4L-Sh-yrX" id="H1g-Qw-KJq"/>
+                <outlet property="userImage" destination="y5T-XL-VmN" id="oAc-5v-pfC"/>
+                <outlet property="userName" destination="fjz-Y4-zGe" id="fbb-69-EAg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +22,92 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2L-u4-TY6">
+                    <rect key="frame" x="12" y="30" width="12" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="7py-g3-riz"/>
+                        <constraint firstAttribute="width" constant="12" id="o3V-ak-g1S"/>
+                    </constraints>
+                    <state key="normal" image="back_button"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="y5T-XL-VmN">
+                    <rect key="frame" x="167.5" y="60" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="bKe-qY-4I5"/>
+                        <constraint firstAttribute="height" constant="40" id="uZx-1o-6jG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjz-Y4-zGe">
+                    <rect key="frame" x="151.5" y="108" width="72.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-oy-WNx">
+                    <rect key="frame" x="129" y="160" width="117" height="65"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcT-bf-tIU">
+                    <rect key="frame" x="104" y="182" width="23" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastercard 1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4L-Sh-yrX">
+                    <rect key="frame" x="90" y="271.5" width="115" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot_white" translatesAutoresizingMaskIntoConstraints="NO" id="5wP-Pa-HOm">
+                    <rect key="frame" x="192" y="260" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Gzk-Qa-s8F"/>
+                        <constraint firstAttribute="height" constant="40" id="zd8-YR-euv"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZn-YB-uJ5">
+                    <rect key="frame" x="219" y="265" width="53" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="EDITAR">
+                        <color key="titleColor" red="0.066666666666666666" green="0.7803921568627451" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="editCreditCardPressed:" destination="-1" eventType="touchUpInside" id="Aj4-73-tIG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="p2L-u4-TY6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="3Ne-YC-bDz"/>
+                <constraint firstItem="y5T-XL-VmN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="8mn-Gm-y2A"/>
+                <constraint firstItem="pdf-oy-WNx" firstAttribute="leading" secondItem="hcT-bf-tIU" secondAttribute="trailing" constant="2" id="EyM-6A-JOe"/>
+                <constraint firstItem="pdf-oy-WNx" firstAttribute="centerY" secondItem="hcT-bf-tIU" secondAttribute="centerY" id="GKJ-eX-fxD"/>
+                <constraint firstItem="fjz-Y4-zGe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Iqo-My-ceR"/>
+                <constraint firstItem="XZn-YB-uJ5" firstAttribute="centerY" secondItem="5wP-Pa-HOm" secondAttribute="centerY" id="M5p-ov-9uc"/>
+                <constraint firstItem="XZn-YB-uJ5" firstAttribute="leading" secondItem="5wP-Pa-HOm" secondAttribute="trailing" constant="-13" id="PoE-X7-piT"/>
+                <constraint firstItem="hcT-bf-tIU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="VVQ-Xq-2rg"/>
+                <constraint firstItem="XZn-YB-uJ5" firstAttribute="top" secondItem="pdf-oy-WNx" secondAttribute="bottom" constant="40" id="XXn-FA-QLC"/>
+                <constraint firstItem="y5T-XL-VmN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e4Q-zx-QUO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pdf-oy-WNx" secondAttribute="trailing" constant="8" id="f2A-us-i5n"/>
+                <constraint firstItem="pdf-oy-WNx" firstAttribute="top" secondItem="fjz-Y4-zGe" secondAttribute="bottom" constant="35" id="gSU-P1-PSR"/>
+                <constraint firstItem="w4L-Sh-yrX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-40" id="lHX-iR-8U2"/>
+                <constraint firstItem="XZn-YB-uJ5" firstAttribute="centerY" secondItem="w4L-Sh-yrX" secondAttribute="centerY" id="lXi-bz-guJ"/>
+                <constraint firstItem="fjz-Y4-zGe" firstAttribute="top" secondItem="y5T-XL-VmN" secondAttribute="bottom" constant="8" id="lkB-i6-Sbz"/>
+                <constraint firstItem="5wP-Pa-HOm" firstAttribute="leading" secondItem="w4L-Sh-yrX" secondAttribute="trailing" constant="-13" id="pKm-ck-ZdM"/>
+                <constraint firstItem="p2L-u4-TY6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="wLl-oQ-X3i"/>
+                <constraint firstItem="pdf-oy-WNx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zuI-gR-hR2"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="4225" y="9"/>
         </view>
     </objects>
+    <resources>
+        <image name="back_button" width="13" height="20"/>
+        <image name="dot_white" width="1024" height="1024"/>
+        <image name="user_placeholder" width="588" height="578"/>
+    </resources>
 </document>
