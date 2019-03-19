@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
                 <outlet property="creditCard" destination="w4L-Sh-yrX" id="H1g-Qw-KJq"/>
+                <outlet property="payButton" destination="8HB-HN-BPH" id="RG6-n7-kwM"/>
                 <outlet property="userImage" destination="y5T-XL-VmN" id="oAc-5v-pfC"/>
                 <outlet property="userName" destination="fjz-Y4-zGe" id="fbb-69-EAg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -79,9 +80,21 @@
                         <action selector="editCreditCardPressed:" destination="-1" eventType="touchUpInside" id="Aj4-73-tIG"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HB-HN-BPH">
+                    <rect key="frame" x="12" y="605" width="351" height="50"/>
+                    <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eIJ-dH-Yfh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Pagar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="8HB-HN-BPH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="31Q-fP-Jod"/>
                 <constraint firstItem="p2L-u4-TY6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="3Ne-YC-bDz"/>
                 <constraint firstItem="y5T-XL-VmN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="8mn-Gm-y2A"/>
                 <constraint firstItem="pdf-oy-WNx" firstAttribute="leading" secondItem="hcT-bf-tIU" secondAttribute="trailing" constant="2" id="EyM-6A-JOe"/>
@@ -89,6 +102,7 @@
                 <constraint firstItem="fjz-Y4-zGe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Iqo-My-ceR"/>
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="centerY" secondItem="5wP-Pa-HOm" secondAttribute="centerY" id="M5p-ov-9uc"/>
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="leading" secondItem="5wP-Pa-HOm" secondAttribute="trailing" constant="-13" id="PoE-X7-piT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8HB-HN-BPH" secondAttribute="bottom" constant="12" id="QAh-fp-5go"/>
                 <constraint firstItem="hcT-bf-tIU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="VVQ-Xq-2rg"/>
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="top" secondItem="pdf-oy-WNx" secondAttribute="bottom" constant="40" id="XXn-FA-QLC"/>
                 <constraint firstItem="y5T-XL-VmN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e4Q-zx-QUO"/>
@@ -98,6 +112,7 @@
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="centerY" secondItem="w4L-Sh-yrX" secondAttribute="centerY" id="lXi-bz-guJ"/>
                 <constraint firstItem="fjz-Y4-zGe" firstAttribute="top" secondItem="y5T-XL-VmN" secondAttribute="bottom" constant="8" id="lkB-i6-Sbz"/>
                 <constraint firstItem="5wP-Pa-HOm" firstAttribute="leading" secondItem="w4L-Sh-yrX" secondAttribute="trailing" constant="-13" id="pKm-ck-ZdM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8HB-HN-BPH" secondAttribute="trailing" constant="12" id="pNG-QR-QaD"/>
                 <constraint firstItem="p2L-u4-TY6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="wLl-oQ-X3i"/>
                 <constraint firstItem="pdf-oy-WNx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zuI-gR-hR2"/>
             </constraints>

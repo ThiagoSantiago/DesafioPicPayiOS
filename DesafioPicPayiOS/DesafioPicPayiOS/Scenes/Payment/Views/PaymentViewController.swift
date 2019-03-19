@@ -18,6 +18,7 @@ protocol PaymentViewProtocol: class {
 class PaymentViewController: BaseViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var creditCard: UILabel!
+    @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var userImage: UIImageView!
     
 //    var paymentData: PaymentViewModel?
@@ -34,16 +35,20 @@ class PaymentViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userImage.layer.cornerRadius = 20
+        configViews()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        interactor?.makeApayment()
+    func configViews() {
+        userImage.layer.cornerRadius = 20
+        payButton.layer.cornerRadius = 25
     }
     
     @IBAction func editCreditCardPressed(_ sender: Any) {
         AppRouter.shared.routeToHome()
+    }
+    
+    @IBAction func payButtonPressed(_ sender: Any) {
+        interactor?.makeApayment()
     }
 }
 

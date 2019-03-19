@@ -22,6 +22,7 @@ class ContactsListViewController: BaseViewController {
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tryAgainButton: UIButton!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     var interactor: ContactListInteractor?
@@ -54,6 +55,7 @@ class ContactsListViewController: BaseViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.tryAgainButton.layer.cornerRadius = 25
         self.headerView.setDelegate(delegate: self)
         self.headerHeightConstraint.constant = self.maxHeight
         
@@ -66,6 +68,10 @@ class ContactsListViewController: BaseViewController {
     
     @objc private func dismissKeyboard() {
         headerView.searchbar.resignFirstResponder()
+    }
+    
+    @IBAction func tryAgainButtonPressed(_ sender: Any) {
+        interactor?.getUsersList()
     }
 }
 
@@ -192,7 +198,7 @@ extension ContactsListViewController: ContactListProtocol {
     }
     
     func displayTransactionRecipt(_ transaction: TransactionViewModel) {
-        // implement the view to shoe the transaction recipt 
+        // implement the view to shoe the transaction recipt
     }
 }
 

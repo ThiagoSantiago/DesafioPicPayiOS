@@ -17,6 +17,7 @@
                 <outlet property="headerHeightConstraint" destination="kub-6w-dfZ" id="n1h-Ni-IwW"/>
                 <outlet property="headerView" destination="d8g-d5-h5S" id="02U-8P-sXX"/>
                 <outlet property="tableView" destination="ZwV-7t-zWF" id="3Hy-fF-1gO"/>
+                <outlet property="tryAgainButton" destination="fSF-iB-g27" id="s8a-FI-3iF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,13 +53,30 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-iB-g27">
+                            <rect key="frame" x="12" y="430" width="351" height="50"/>
+                            <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="XE1-2Z-xal"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <state key="normal" title="Tentar novamente">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tryAgainButtonPressed:" destination="-1" eventType="touchUpInside" id="Cie-oc-VuH"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="La1-X3-bFF" firstAttribute="leading" secondItem="ihL-XB-gNw" secondAttribute="leading" constant="16" id="47e-FR-tTU"/>
                         <constraint firstAttribute="trailing" secondItem="La1-X3-bFF" secondAttribute="trailing" constant="16" id="Boe-as-87h"/>
                         <constraint firstItem="nkT-y4-j18" firstAttribute="centerX" secondItem="ihL-XB-gNw" secondAttribute="centerX" id="H9P-MV-Abf"/>
+                        <constraint firstAttribute="trailing" secondItem="fSF-iB-g27" secondAttribute="trailing" constant="12" id="Tnf-mq-1rA"/>
+                        <constraint firstItem="fSF-iB-g27" firstAttribute="leading" secondItem="ihL-XB-gNw" secondAttribute="leading" constant="12" id="Ud3-HZ-Cj2"/>
                         <constraint firstItem="La1-X3-bFF" firstAttribute="top" secondItem="nkT-y4-j18" secondAttribute="bottom" constant="30" id="VWS-dR-PqV"/>
+                        <constraint firstAttribute="bottom" secondItem="fSF-iB-g27" secondAttribute="bottom" constant="12" id="dNb-LQ-1hn"/>
                         <constraint firstItem="La1-X3-bFF" firstAttribute="centerY" secondItem="ihL-XB-gNw" secondAttribute="centerY" constant="10" id="y65-1D-Fwr"/>
                     </constraints>
                 </view>
