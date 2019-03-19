@@ -21,21 +21,25 @@ class ContactListWorker {
     typealias GetUsersListSuccess = (_ movies: UsersList) -> Void
     func getUsersList(success: @escaping GetUsersListSuccess, failure: @escaping Failure) {
         
-        requester.request(PicPayContactListServiceSetup.getUsers()) { result in
-            switch result{
-            case let .success(data):
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let userssList = try decoder.decode(UsersList.self, from: data)
-                    self.users = userssList
-                    success(userssList)
-                } catch {
-                    failure(.couldNotParseObject)
+        if users.isEmpty {
+            requester.request(PicPayContactListServiceSetup.getUsers()) { result in
+                switch result{
+                case let .success(data):
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let userssList = try decoder.decode(UsersList.self, from: data)
+                        self.users = userssList
+                        success(userssList)
+                    } catch {
+                        failure(.couldNotParseObject)
+                    }
+                case let .failure(error):
+                    failure(error)
                 }
-            case let .failure(error):
-                failure(error)
             }
+        } else {
+            success(users)
         }
     }
     

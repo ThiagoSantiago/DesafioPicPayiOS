@@ -72,7 +72,7 @@ class RegisterNewCardViewController: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
-            self.bottonButtonConstraint.constant = 12
+            self.bottonButtonConstraint.constant = 24
         }
     }
 

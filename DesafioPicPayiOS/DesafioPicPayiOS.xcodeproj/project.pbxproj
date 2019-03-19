@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18360C042240580900342A07 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360C032240580900342A07 /* Payment.swift */; };
 		1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8B2238643C00F27019 /* BaseViewController.swift */; };
 		1848BC902238783700F27019 /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8F2238783700F27019 /* NewCardViewController.swift */; };
 		1848BC922238787C00F27019 /* NewCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848BC912238787C00F27019 /* NewCardViewController.xib */; };
@@ -44,6 +45,7 @@
 		18BD4D2D2239FCF600A7CBBE /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2C2239FCF600A7CBBE /* PaymentPresenter.swift */; };
 		18BD4D302239FD8700A7CBBE /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */; };
 		18BD4D312239FD8700A7CBBE /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */; };
+		18EADB8D224144F700731347 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB8C224144F700731347 /* TransactionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18360C032240580900342A07 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		1848BC8B2238643C00F27019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1848BC8F2238783700F27019 /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
 		1848BC912238787C00F27019 /* NewCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCardViewController.xib; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		18BD4D2C2239FCF600A7CBBE /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
 		18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		18EADB8C224144F700731347 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +324,8 @@
 		18BD4D222239F86F00A7CBBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18EADB8B224144CA00731347 /* ViewModel */,
+				18360C032240580900342A07 /* Payment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,6 +353,14 @@
 				18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		18EADB8B224144CA00731347 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18EADB8C224144F700731347 /* TransactionViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +471,7 @@
 			files = (
 				18A24EA2223764D5003F0F4A /* User.swift in Sources */,
 				1848BC902238783700F27019 /* NewCardViewController.swift in Sources */,
+				18360C042240580900342A07 /* Payment.swift in Sources */,
 				18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */,
 				18A24E9D22376334003F0F4A /* ContactListPresenter.swift in Sources */,
 				18BD4D2D2239FCF600A7CBBE /* PaymentPresenter.swift in Sources */,
@@ -483,6 +498,7 @@
 				18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */,
 				18A24E8B223731D3003F0F4A /* HeaderView.swift in Sources */,
 				18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */,
+				18EADB8D224144F700731347 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

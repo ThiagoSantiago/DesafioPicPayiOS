@@ -21,13 +21,26 @@ protocol PicPayApiRequestProtocol {
 class PicPayApiRequest: PicPayApiRequestProtocol {
     
     func request(_ request: PicPayApiSetupProtocol, completion: @escaping (Result<Data>) -> Void) {
+        var  jsonData = NSData()
         
         guard let urlRequest = URL(string: request.endpoint) else {
             completion(.failure(.badUrl))
             return
         }
         
-        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: request.parameters, options: .prettyPrinted) as NSData
+        } catch {
+            completion(.failure(.brokenData))
+        }
+        
+        var requestData = URLRequest(url: urlRequest)
+        requestData.httpMethod = request.method.rawValue
+        requestData.allHTTPHeaderFields = request.headers
+        requestData.httpBody = jsonData as Data
+        
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        let task = session.dataTask(with: requestData) { (data, response, error) in
             
             if let error = error {
                 completion(.failure(.unknown(error.localizedDescription)))
@@ -45,7 +58,8 @@ class PicPayApiRequest: PicPayApiRequestProtocol {
             
             completion(self.handler(statusCode: httpResponse.statusCode, dataResponse: data))
             
-            }.resume()
+            }
+            task.resume()
     }
     
     private func handler(statusCode: Int, dataResponse: Data) -> Result<Data> {

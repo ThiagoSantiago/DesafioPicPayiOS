@@ -23,10 +23,11 @@ class PaymentInteractor: PaymentInteractorProtocol {
     
     func makeApayment() {
         presenter?.presentLoadingView()
-        worker?.makeAPayment(success: {
+        worker?.makeAPayment(success: { result in
             DispatchQueue.main.async {
                 self.presenter?.closeLoadingView()
-                self.presenter?.presentSucces()
+                let viewModel = self.treatPaymentData(result: result)
+                self.presenter?.presentSucces(transaction: viewModel)
             }
         }, failure: { error in
             DispatchQueue.main.async {
@@ -35,4 +36,10 @@ class PaymentInteractor: PaymentInteractorProtocol {
             }
         })
     }
+    
+    private func treatPaymentData(result: Payment) -> TransactionViewModel {
+        return TransactionViewModel(time: "\(result.transaction.timestamp)",
+            card: "Cartão Master 1234", value: result.transaction.value, userImg: result.transaction.destinationUser.img, username: result.transaction.destinationUser.username, transactionId: result.transaction.id)
+    }
 }
+

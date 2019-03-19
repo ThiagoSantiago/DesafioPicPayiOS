@@ -12,6 +12,7 @@ protocol ContactListProtocol: class {
     func hideLoadingView()
     func displayLoadingView()
     func displayError(_ message: String)
+    func displayTransactionRecipt(_ transaction: TransactionViewModel)
     func displayUsers(_ list: [UserViewModel])
 }
 
@@ -188,6 +189,10 @@ extension ContactsListViewController: ContactListProtocol {
         
         self.tableViewData = list
         self.tableView.reloadData()
+    }
+    
+    func displayTransactionRecipt(_ transaction: TransactionViewModel) {
+        // implement the view to shoe the transaction recipt 
     }
 }
 

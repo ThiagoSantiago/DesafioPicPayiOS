@@ -29,6 +29,10 @@ enum PicPayPaymentServiceSetup: PicPayApiSetupProtocol {
         }
     }
     
+    var headers: [String : String] {
+        return ["Content-Type":"application/json"]
+    }
+    
     var parameters: [String : Any] {
         switch self {
         case .makeAPayment():

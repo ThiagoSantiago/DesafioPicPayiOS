@@ -78,7 +78,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-zI-2mr">
-                    <rect key="frame" x="12" y="605" width="351" height="50"/>
+                    <rect key="frame" x="12" y="593" width="351" height="50"/>
                     <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="npd-Jy-sCO"/>
@@ -118,7 +118,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aib-mK-e6b" secondAttribute="trailing" constant="20" id="dRD-Mj-8dy"/>
                 <constraint firstItem="kHe-VF-dip" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hxe-lU-NxP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MRo-Kk-UGU" secondAttribute="trailing" constant="20" id="iMh-uX-j2j"/>
-                <constraint firstAttribute="bottom" secondItem="YeH-zI-2mr" secondAttribute="bottom" constant="12" id="kvA-1R-kwJ"/>
+                <constraint firstAttribute="bottom" secondItem="YeH-zI-2mr" secondAttribute="bottom" constant="24" id="kvA-1R-kwJ"/>
                 <constraint firstItem="jnv-4D-yCE" firstAttribute="top" secondItem="kHe-VF-dip" secondAttribute="bottom" constant="60" id="mO0-7W-5sD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EoW-RU-B7b" secondAttribute="trailing" constant="20" id="oE9-ds-155"/>
                 <constraint firstItem="Aib-mK-e6b" firstAttribute="leading" secondItem="QHk-BI-v4n" secondAttribute="trailing" constant="10" id="sAP-Gl-dGf"/>

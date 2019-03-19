@@ -43,6 +43,19 @@ class AppRouter {
         self.navigation.pushViewController(viewController, animated: false)
     }
     
+    func popToHome(with viewModel: TransactionViewModel) {
+        for controller in navigation.viewControllers as Array {
+            if controller.isKind(of: ContactsListViewController.self) {
+                guard let vc = controller as? ContactsListViewController else {
+                    break
+                }
+                vc.displayTransactionRecipt(viewModel)
+                navigation.popToViewController(vc, animated: true)
+                break
+            }
+        }
+    }
+    
     func popViewController() {
         self.navigation.popViewController(animated: true)
     }

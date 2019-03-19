@@ -19,7 +19,7 @@ class PaymentWorker {
     }
     
     
-    typealias MakeAPaymentSuccess = () -> Void
+    typealias MakeAPaymentSuccess = (_ result: Payment) -> Void
     func makeAPayment(success: @escaping MakeAPaymentSuccess, failure: @escaping Failure) {
         
         requester.request(PicPayPaymentServiceSetup.makeAPayment()) { result in
@@ -28,7 +28,9 @@ class PaymentWorker {
                 
                 do {
                     let decoder = JSONDecoder()
-                    success()
+                    let paymentData = try decoder.decode(Payment.self, from: data)
+                    
+                    success(paymentData)
                 } catch {
                     failure(.couldNotParseObject)
                 }

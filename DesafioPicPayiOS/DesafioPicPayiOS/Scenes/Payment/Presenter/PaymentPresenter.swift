@@ -11,7 +11,7 @@ import Foundation
 protocol PaymentPresenterProtocol {
     func closeLoadingView()
     func presentLoadingView()
-    func presentSucces()
+    func presentSucces(transaction: TransactionViewModel)
     func presentError(message: String)
 }
 
@@ -26,8 +26,8 @@ class PaymentPresenter: PaymentPresenterProtocol {
         viewController?.showLoadingView()
     }
     
-    func presentSucces() {
-        viewController?.displaySucces()
+    func presentSucces(transaction: TransactionViewModel) {
+        viewController?.displaySucces(transaction)
     }
     
     func presentError(message: String) {

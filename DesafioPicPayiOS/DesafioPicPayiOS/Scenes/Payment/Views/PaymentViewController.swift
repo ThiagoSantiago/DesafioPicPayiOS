@@ -11,7 +11,7 @@ import UIKit
 protocol PaymentViewProtocol: class {
     func hideLoadingView()
     func showLoadingView()
-    func displaySucces()
+    func displaySucces(_ payment: TransactionViewModel)
     func displayError(message: String)
 }
 
@@ -35,6 +35,10 @@ class PaymentViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userImage.layer.cornerRadius = 20
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         interactor?.makeApayment()
     }
     
@@ -52,8 +56,8 @@ extension PaymentViewController: PaymentViewProtocol {
         self.showLoader()
     }
     
-    func displaySucces() {
-        AppRouter.shared.routeToHome()
+    func displaySucces(_ transaction: TransactionViewModel) {
+        AppRouter.shared.popToHome(with: transaction)
     }
     
     func displayError(message: String) {
