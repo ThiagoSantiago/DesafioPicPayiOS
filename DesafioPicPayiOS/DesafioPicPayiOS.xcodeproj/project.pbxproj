@@ -57,7 +57,6 @@
 		18EADB9D2241FA3000731347 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB9C2241FA3000731347 /* PaymentViewModel.swift */; };
 		18F99BED2242A19200BDB000 /* RegisterCardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F99BEC2242A19200BDB000 /* RegisterCardInteractor.swift */; };
 		18F99BF02242A26600BDB000 /* RegisterCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F99BEF2242A26600BDB000 /* RegisterCardPresenter.swift */; };
-		95619220B5F9B03A6BABA58D /* Pods_DesafioPicPayiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C8E7611C25C94468C63995 /* Pods_DesafioPicPayiOSTests.framework */; };
 		DB30E500224BFE2517E09BD8 /* Pods_DesafioPicPayiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A41ACB41203C4AE39D61485 /* Pods_DesafioPicPayiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,9 +128,7 @@
 		18F99BEF2242A26600BDB000 /* RegisterCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardPresenter.swift; sourceTree = "<group>"; };
 		1A41ACB41203C4AE39D61485 /* Pods_DesafioPicPayiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioPicPayiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343A2D8A8C3629689AF6EB8E /* Pods-DesafioPicPayiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		85920E3031DF74A9DF8B0828 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOSTests/Pods-DesafioPicPayiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F39DA45C00F0FA484173C1 /* Pods-DesafioPicPayiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS.release.xcconfig"; sourceTree = "<group>"; };
-		B2E5C3760C9DCB841A9EDB18 /* Pods-DesafioPicPayiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOSTests/Pods-DesafioPicPayiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +144,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95619220B5F9B03A6BABA58D /* Pods_DesafioPicPayiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +434,6 @@
 			children = (
 				343A2D8A8C3629689AF6EB8E /* Pods-DesafioPicPayiOS.debug.xcconfig */,
 				A3F39DA45C00F0FA484173C1 /* Pods-DesafioPicPayiOS.release.xcconfig */,
-				85920E3031DF74A9DF8B0828 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */,
-				B2E5C3760C9DCB841A9EDB18 /* Pods-DesafioPicPayiOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -470,7 +464,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A24E7822372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOSTests" */;
 			buildPhases = (
-				2B29E9F4DF54D9F224C18D51 /* [CP] Check Pods Manifest.lock */,
 				18A24E6822372323003F0F4A /* Sources */,
 				18A24E6922372323003F0F4A /* Frameworks */,
 				18A24E6A22372323003F0F4A /* Resources */,
@@ -550,24 +543,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B29E9F4DF54D9F224C18D51 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DesafioPicPayiOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		41E0E86E5D8712A690B86907 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -840,7 +815,6 @@
 		};
 		18A24E7922372323003F0F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85920E3031DF74A9DF8B0828 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -862,7 +836,6 @@
 		};
 		18A24E7A22372323003F0F4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2E5C3760C9DCB841A9EDB18 /* Pods-DesafioPicPayiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

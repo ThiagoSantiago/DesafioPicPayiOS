@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097E86ABC6B590ADF531D56C150B76FF /* Pods-DesafioPicPayiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC2ABB53B5D013C21017C2D8F065109 /* Pods-DesafioPicPayiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DB18586131B8ABF1F135D3A225EAAE9 /* Pods-DesafioPicPayiOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A5500AC424DA6DBF557F39ED9937B0 /* Pods-DesafioPicPayiOSTests-dummy.m */; };
+		097E86ABC6B590ADF531D56C150B76FF /* Pods-DesafioPicPayiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C031F05CD71F0D7C992E7AFDDB84074A /* Pods-DesafioPicPayiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F3124CAA6DF861C4AABC2ADFB137FC1 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46048A65E739B3EE90761329C3604475 /* SwiftKeychainWrapper-dummy.m */; };
 		44B417AC4EFD63199AF9F7734BD454FE /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */; };
-		6FEC360B01A16963884BA53C55408AFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		9046157CBC34B797CF280B7B31B07E3F /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B47E8F33B2924E4031DEC168AE39BD09 /* Pods-DesafioPicPayiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 405E954793D5FC1B0643C5F1D718E6FE /* Pods-DesafioPicPayiOS-dummy.m */; };
+		B47E8F33B2924E4031DEC168AE39BD09 /* Pods-DesafioPicPayiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB29BB1B14D6CCACD482DC4EBF84983 /* Pods-DesafioPicPayiOS-dummy.m */; };
 		C1D46861EB8897E75104667E7A9FC78D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		C82E604523F5F600EFCB3102A8ADB8CB /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */; };
 		D00A97DE68CFFF0BBF7F0DD60A00E08E /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A3817E35E45B79E1D8982A19F69A25 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9C517D738085C394BA0750DFF3F6349 /* Pods-DesafioPicPayiOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E8E27810E4275B7859F5CD3BE3036D /* Pods-DesafioPicPayiOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F421E9A9B1F29802DB530CD8FAE3B846 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,50 +26,32 @@
 			remoteGlobalIDString = 9C120909E15B3E1236B5B9E5230B0896;
 			remoteInfo = SwiftKeychainWrapper;
 		};
-		CCDAC68343BB4AF5F4E26287645C49EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9787913FD40598037DD2986530544146;
-			remoteInfo = "Pods-DesafioPicPayiOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0968938B23899F658ECFB0E328163182 /* Pods-DesafioPicPayiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DesafioPicPayiOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		0DE7320E49504622ABB62570B75EEE40 /* Pods-DesafioPicPayiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DesafioPicPayiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		185957871E23D13BE5E559D79088D93F /* Pods-DesafioPicPayiOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DesafioPicPayiOS-frameworks.sh"; sourceTree = "<group>"; };
 		18AA3B09C9566D69297C8FB5EB326932 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
 		2269EA45D1597DD0CE6660AFCE57F0B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22A5500AC424DA6DBF557F39ED9937B0 /* Pods-DesafioPicPayiOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DesafioPicPayiOSTests-dummy.m"; sourceTree = "<group>"; };
-		252E695F20ED302F1FEEE6B9FB3C88CB /* Pods-DesafioPicPayiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DesafioPicPayiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		25FBF786237853ADB540AFAA43DAB70C /* Pods_DesafioPicPayiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DesafioPicPayiOSTests.framework; path = "Pods-DesafioPicPayiOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB29BB1B14D6CCACD482DC4EBF84983 /* Pods-DesafioPicPayiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DesafioPicPayiOS-dummy.m"; sourceTree = "<group>"; };
+		304B9DBC8C51AF48546FEF46D5A65A83 /* Pods-DesafioPicPayiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DesafioPicPayiOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		359918E3266E1732C992EEC4F4F89A7E /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
-		3ECE342E7B8E7C44B7CD30A41687FA97 /* Pods-DesafioPicPayiOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DesafioPicPayiOS-frameworks.sh"; sourceTree = "<group>"; };
-		405E954793D5FC1B0643C5F1D718E6FE /* Pods-DesafioPicPayiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DesafioPicPayiOS-dummy.m"; sourceTree = "<group>"; };
 		42C4EF419B0C8170C9E0DC70EDAFD00B /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		4414716F2AE1968F8F641B38FE4E99FE /* Pods-DesafioPicPayiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DesafioPicPayiOS.modulemap"; sourceTree = "<group>"; };
 		46048A65E739B3EE90761329C3604475 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
-		55BF079D1F26C5DC13D2DA1874824D9A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57D18FB89329351AC96151182F8759C8 /* Pods-DesafioPicPayiOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DesafioPicPayiOSTests-resources.sh"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
-		66A86004FA4F6524CE4F74D9BF1C2AF9 /* Pods-DesafioPicPayiOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DesafioPicPayiOSTests-frameworks.sh"; sourceTree = "<group>"; };
-		6AC2ABB53B5D013C21017C2D8F065109 /* Pods-DesafioPicPayiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DesafioPicPayiOS-umbrella.h"; sourceTree = "<group>"; };
-		76E8E27810E4275B7859F5CD3BE3036D /* Pods-DesafioPicPayiOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DesafioPicPayiOSTests-umbrella.h"; sourceTree = "<group>"; };
+		6A6073B3A0E9F89C96325C254489DD6D /* Pods-DesafioPicPayiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DesafioPicPayiOS.release.xcconfig"; sourceTree = "<group>"; };
 		78A3817E35E45B79E1D8982A19F69A25 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
-		79B7347A7677B50CA6C3E38732F5AD33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86DE881AF05F87CCB4B2C23AB3FC8F7D /* Pods-DesafioPicPayiOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DesafioPicPayiOSTests.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ABFA751188B594DEB07853435EABC7BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
-		B63A52D37EAA0C28992259A8A76B8391 /* Pods-DesafioPicPayiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DesafioPicPayiOS.release.xcconfig"; sourceTree = "<group>"; };
-		BA43E00EFBA6EEED09D57685214B5BB2 /* Pods-DesafioPicPayiOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DesafioPicPayiOS-resources.sh"; sourceTree = "<group>"; };
-		BB58CDDC8FF5704381D82F5252E4046E /* Pods-DesafioPicPayiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DesafioPicPayiOS.modulemap"; sourceTree = "<group>"; };
-		BDC87A059EC435A88F58A7A5BB102F9F /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCF0059614B6DCB9C2C857B5A348FA21 /* Pods-DesafioPicPayiOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DesafioPicPayiOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C031F05CD71F0D7C992E7AFDDB84074A /* Pods-DesafioPicPayiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DesafioPicPayiOS-umbrella.h"; sourceTree = "<group>"; };
+		C2A7AEFC7836D885E0D0FAE25EB835CC /* Pods-DesafioPicPayiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DesafioPicPayiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
-		D460AD10E34370BFA605AEBF7B9A789F /* Pods-DesafioPicPayiOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DesafioPicPayiOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F07FEBAA198506349E98FAAF95492004 /* Pods_DesafioPicPayiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DesafioPicPayiOS.framework; path = "Pods-DesafioPicPayiOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2EFEB273A16F798318513A319334DB8 /* Pods-DesafioPicPayiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DesafioPicPayiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FB26879DDCBB3B0D47D15782C5455475 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DesafioPicPayiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D43522D0A45CE86FCC408B7830DB3877 /* Pods-DesafioPicPayiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DesafioPicPayiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D68D528B0A0EC4E390E03B2E6DEC3D20 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA228A8ACF7F8149C00202F9AEB799B /* Pods-DesafioPicPayiOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DesafioPicPayiOS-resources.sh"; sourceTree = "<group>"; };
+		E6F6CFC91A1D4F639038C258C1B5F5C5 /* Pods_DesafioPicPayiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DesafioPicPayiOS.framework; path = "Pods-DesafioPicPayiOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +60,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1D46861EB8897E75104667E7A9FC78D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8872B4F8D1B57FCDA98EB162C367D919 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FEC360B01A16963884BA53C55408AFF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,24 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033BC18D61512E8DF10575BD69274A8D /* Pods-DesafioPicPayiOS */ = {
-			isa = PBXGroup;
-			children = (
-				55BF079D1F26C5DC13D2DA1874824D9A /* Info.plist */,
-				BB58CDDC8FF5704381D82F5252E4046E /* Pods-DesafioPicPayiOS.modulemap */,
-				F2EFEB273A16F798318513A319334DB8 /* Pods-DesafioPicPayiOS-acknowledgements.markdown */,
-				0968938B23899F658ECFB0E328163182 /* Pods-DesafioPicPayiOS-acknowledgements.plist */,
-				405E954793D5FC1B0643C5F1D718E6FE /* Pods-DesafioPicPayiOS-dummy.m */,
-				3ECE342E7B8E7C44B7CD30A41687FA97 /* Pods-DesafioPicPayiOS-frameworks.sh */,
-				BA43E00EFBA6EEED09D57685214B5BB2 /* Pods-DesafioPicPayiOS-resources.sh */,
-				6AC2ABB53B5D013C21017C2D8F065109 /* Pods-DesafioPicPayiOS-umbrella.h */,
-				252E695F20ED302F1FEEE6B9FB3C88CB /* Pods-DesafioPicPayiOS.debug.xcconfig */,
-				B63A52D37EAA0C28992259A8A76B8391 /* Pods-DesafioPicPayiOS.release.xcconfig */,
-			);
-			name = "Pods-DesafioPicPayiOS";
-			path = "Target Support Files/Pods-DesafioPicPayiOS";
-			sourceTree = "<group>";
-		};
 		0958F96BB3483550DA4C15FA93B8DDC9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,31 +88,30 @@
 			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
-		0C6E16241CF0AAC0B5C9E9D329BB5DD5 /* Targets Support Files */ = {
+		18DFC78B44C09070E32FDFE6560BA29C /* Pods-DesafioPicPayiOS */ = {
 			isa = PBXGroup;
 			children = (
-				033BC18D61512E8DF10575BD69274A8D /* Pods-DesafioPicPayiOS */,
-				249759137C6D60DA66E04CC785E499FC /* Pods-DesafioPicPayiOSTests */,
+				ABFA751188B594DEB07853435EABC7BB /* Info.plist */,
+				4414716F2AE1968F8F641B38FE4E99FE /* Pods-DesafioPicPayiOS.modulemap */,
+				C2A7AEFC7836D885E0D0FAE25EB835CC /* Pods-DesafioPicPayiOS-acknowledgements.markdown */,
+				304B9DBC8C51AF48546FEF46D5A65A83 /* Pods-DesafioPicPayiOS-acknowledgements.plist */,
+				2CB29BB1B14D6CCACD482DC4EBF84983 /* Pods-DesafioPicPayiOS-dummy.m */,
+				185957871E23D13BE5E559D79088D93F /* Pods-DesafioPicPayiOS-frameworks.sh */,
+				DEA228A8ACF7F8149C00202F9AEB799B /* Pods-DesafioPicPayiOS-resources.sh */,
+				C031F05CD71F0D7C992E7AFDDB84074A /* Pods-DesafioPicPayiOS-umbrella.h */,
+				D43522D0A45CE86FCC408B7830DB3877 /* Pods-DesafioPicPayiOS.debug.xcconfig */,
+				6A6073B3A0E9F89C96325C254489DD6D /* Pods-DesafioPicPayiOS.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-DesafioPicPayiOS";
+			path = "Target Support Files/Pods-DesafioPicPayiOS";
 			sourceTree = "<group>";
 		};
-		249759137C6D60DA66E04CC785E499FC /* Pods-DesafioPicPayiOSTests */ = {
+		53E65E81892CF245007F2F8A05F27C44 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				79B7347A7677B50CA6C3E38732F5AD33 /* Info.plist */,
-				86DE881AF05F87CCB4B2C23AB3FC8F7D /* Pods-DesafioPicPayiOSTests.modulemap */,
-				D460AD10E34370BFA605AEBF7B9A789F /* Pods-DesafioPicPayiOSTests-acknowledgements.markdown */,
-				CCF0059614B6DCB9C2C857B5A348FA21 /* Pods-DesafioPicPayiOSTests-acknowledgements.plist */,
-				22A5500AC424DA6DBF557F39ED9937B0 /* Pods-DesafioPicPayiOSTests-dummy.m */,
-				66A86004FA4F6524CE4F74D9BF1C2AF9 /* Pods-DesafioPicPayiOSTests-frameworks.sh */,
-				57D18FB89329351AC96151182F8759C8 /* Pods-DesafioPicPayiOSTests-resources.sh */,
-				76E8E27810E4275B7859F5CD3BE3036D /* Pods-DesafioPicPayiOSTests-umbrella.h */,
-				FB26879DDCBB3B0D47D15782C5455475 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */,
-				0DE7320E49504622ABB62570B75EEE40 /* Pods-DesafioPicPayiOSTests.release.xcconfig */,
+				18DFC78B44C09070E32FDFE6560BA29C /* Pods-DesafioPicPayiOS */,
 			);
-			name = "Pods-DesafioPicPayiOSTests";
-			path = "Target Support Files/Pods-DesafioPicPayiOSTests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -176,8 +128,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				A0DC98CF63826F78B027F4AD3A6E1A4D /* Pods */,
-				BC14A709AFCF9122DF6109CFC5EB2DD6 /* Products */,
-				0C6E16241CF0AAC0B5C9E9D329BB5DD5 /* Targets Support Files */,
+				CBE1463C4210FE77A505469D49D89B9B /* Products */,
+				53E65E81892CF245007F2F8A05F27C44 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,22 +153,21 @@
 			path = SwiftKeychainWrapper;
 			sourceTree = "<group>";
 		};
-		BC14A709AFCF9122DF6109CFC5EB2DD6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F07FEBAA198506349E98FAAF95492004 /* Pods_DesafioPicPayiOS.framework */,
-				25FBF786237853ADB540AFAA43DAB70C /* Pods_DesafioPicPayiOSTests.framework */,
-				BDC87A059EC435A88F58A7A5BB102F9F /* SwiftKeychainWrapper.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBE1463C4210FE77A505469D49D89B9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6CFC91A1D4F639038C258C1B5F5C5 /* Pods_DesafioPicPayiOS.framework */,
+				D68D528B0A0EC4E390E03B2E6DEC3D20 /* SwiftKeychainWrapper.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,14 +190,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54898F232E03DED4FE447936F1FFF43A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D9C517D738085C394BA0750DFF3F6349 /* Pods-DesafioPicPayiOSTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -265,7 +208,7 @@
 			);
 			name = "Pods-DesafioPicPayiOS";
 			productName = "Pods-DesafioPicPayiOS";
-			productReference = F07FEBAA198506349E98FAAF95492004 /* Pods_DesafioPicPayiOS.framework */;
+			productReference = E6F6CFC91A1D4F639038C258C1B5F5C5 /* Pods_DesafioPicPayiOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9C120909E15B3E1236B5B9E5230B0896 /* SwiftKeychainWrapper */ = {
@@ -282,25 +225,7 @@
 			);
 			name = SwiftKeychainWrapper;
 			productName = SwiftKeychainWrapper;
-			productReference = BDC87A059EC435A88F58A7A5BB102F9F /* SwiftKeychainWrapper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F5B50D5503E9767EC1B86CB62130AAE2 /* Pods-DesafioPicPayiOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DB39E76DBE95870B7E1DA568AEDC3A74 /* Build configuration list for PBXNativeTarget "Pods-DesafioPicPayiOSTests" */;
-			buildPhases = (
-				D991691ECD554B89F7E4571077DF5C9A /* Sources */,
-				8872B4F8D1B57FCDA98EB162C367D919 /* Frameworks */,
-				54898F232E03DED4FE447936F1FFF43A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B578B1A929963CFE066F0DB6060DAC6 /* PBXTargetDependency */,
-			);
-			name = "Pods-DesafioPicPayiOSTests";
-			productName = "Pods-DesafioPicPayiOSTests";
-			productReference = 25FBF786237853ADB540AFAA43DAB70C /* Pods_DesafioPicPayiOSTests.framework */;
+			productReference = D68D528B0A0EC4E390E03B2E6DEC3D20 /* SwiftKeychainWrapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -320,12 +245,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BC14A709AFCF9122DF6109CFC5EB2DD6 /* Products */;
+			productRefGroup = CBE1463C4210FE77A505469D49D89B9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9787913FD40598037DD2986530544146 /* Pods-DesafioPicPayiOS */,
-				F5B50D5503E9767EC1B86CB62130AAE2 /* Pods-DesafioPicPayiOSTests */,
 				9C120909E15B3E1236B5B9E5230B0896 /* SwiftKeychainWrapper */,
 			);
 		};
@@ -350,23 +274,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D991691ECD554B89F7E4571077DF5C9A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DB18586131B8ABF1F135D3A225EAAE9 /* Pods-DesafioPicPayiOSTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B578B1A929963CFE066F0DB6060DAC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-DesafioPicPayiOS";
-			target = 9787913FD40598037DD2986530544146 /* Pods-DesafioPicPayiOS */;
-			targetProxy = CCDAC68343BB4AF5F4E26287645C49EB /* PBXContainerItemProxy */;
-		};
 		F0F265C57713787D2F45C3E0FE20FB2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftKeychainWrapper;
@@ -376,64 +286,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		063198AB09B9CDB3A695432FC17AD8CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
 		4CFCC890743FD989B45606961B24E458 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18AA3B09C9566D69297C8FB5EB326932 /* SwiftKeychainWrapper.xcconfig */;
@@ -471,84 +323,7 @@
 			};
 			name = Release;
 		};
-		5A843CAC0EB354C7119661AD762E7E5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DE7320E49504622ABB62570B75EEE40 /* Pods-DesafioPicPayiOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DesafioPicPayiOSTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DesafioPicPayiOSTests/Pods-DesafioPicPayiOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		635E031A43056BABEEC67619A8F3271F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB26879DDCBB3B0D47D15782C5455475 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DesafioPicPayiOSTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DesafioPicPayiOSTests/Pods-DesafioPicPayiOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		87EAC867385563488A6D8F1E74AC46B4 /* Debug */ = {
+		553022A828EE1991F07D2D73F565AEF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -601,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -610,6 +385,64 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		58CE816B060A41D32CEC095441D0E3E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
 		};
 		99C134F71E42927B5400F6752234A426 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -647,9 +480,9 @@
 			};
 			name = Debug;
 		};
-		ACC6C065EBBB484FA127CE921620CB76 /* Debug */ = {
+		DA86AB4CAE224BA26E15DE494C46D912 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 252E695F20ED302F1FEEE6B9FB3C88CB /* Pods-DesafioPicPayiOS.debug.xcconfig */;
+			baseConfigurationReference = 6A6073B3A0E9F89C96325C254489DD6D /* Pods-DesafioPicPayiOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -664,47 +497,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-DesafioPicPayiOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D1E009D80FED946EFD9BD2A3E227D2A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B63A52D37EAA0C28992259A8A76B8391 /* Pods-DesafioPicPayiOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DesafioPicPayiOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -727,14 +520,54 @@
 			};
 			name = Release;
 		};
+		F326A65DF02BA8895A334D1CB9582746 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D43522D0A45CE86FCC408B7830DB3877 /* Pods-DesafioPicPayiOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DesafioPicPayiOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87EAC867385563488A6D8F1E74AC46B4 /* Debug */,
-				063198AB09B9CDB3A695432FC17AD8CA /* Release */,
+				553022A828EE1991F07D2D73F565AEF8 /* Debug */,
+				58CE816B060A41D32CEC095441D0E3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -748,20 +581,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB39E76DBE95870B7E1DA568AEDC3A74 /* Build configuration list for PBXNativeTarget "Pods-DesafioPicPayiOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				635E031A43056BABEEC67619A8F3271F /* Debug */,
-				5A843CAC0EB354C7119661AD762E7E5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		EE357CD68701687680E3EF4ADA246870 /* Build configuration list for PBXNativeTarget "Pods-DesafioPicPayiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACC6C065EBBB484FA127CE921620CB76 /* Debug */,
-				D1E009D80FED946EFD9BD2A3E227D2A7 /* Release */,
+				F326A65DF02BA8895A334D1CB9582746 /* Debug */,
+				DA86AB4CAE224BA26E15DE494C46D912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
