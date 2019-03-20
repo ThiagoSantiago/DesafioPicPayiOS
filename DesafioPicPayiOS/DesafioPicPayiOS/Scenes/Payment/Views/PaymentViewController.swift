@@ -66,6 +66,8 @@ extension PaymentViewController: PaymentViewProtocol {
     }
     
     func displayError(message: String) {
-        // implement the error feedback
+        let alert = UIAlertController(title: "Payment Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

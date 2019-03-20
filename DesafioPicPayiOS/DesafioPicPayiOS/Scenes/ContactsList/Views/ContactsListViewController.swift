@@ -16,13 +16,16 @@ protocol ContactListProtocol: class {
     func displayUsers(_ list: [UserViewModel])
 }
 
-
 class ContactsListViewController: BaseViewController {
     @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var reciptView: ReciptView!
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tryAgainButton: UIButton!
+    @IBOutlet weak var reciptContainerView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     var interactor: ContactListInteractor?
@@ -31,6 +34,12 @@ class ContactsListViewController: BaseViewController {
     let maxHeight: CGFloat = 175
     let minHeight: CGFloat = 100
     var previousScrollOffset: CGFloat = 0
+    
+    
+    private var currentState: PopupState = .closed
+    private var runningAnimators = [UIViewPropertyAnimator]()
+    private var animationProgress = [CGFloat]()
+    private let popupBottonOffset: CGFloat = 540
     
     init(interactor: ContactListInteractor) {
         super.init(nibName: "ContactsListViewController", bundle: Bundle.main)
@@ -46,9 +55,6 @@ class ContactsListViewController: BaseViewController {
 
         configViews()
         interactor?.getUsersList()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-
-        headerView.addGestureRecognizer(tap)
     }
 
     private func configViews() {
@@ -60,6 +66,12 @@ class ContactsListViewController: BaseViewController {
         self.headerHeightConstraint.constant = self.maxHeight
         
         registerTableViewCells()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        headerView.addGestureRecognizer(tap)
+        
+        let reciptGesture: InstantPanGestureRecognizer = InstantPanGestureRecognizer(target: self, action: #selector(self.popupViewPanned(recognizer:)))
+        reciptContainerView.addGestureRecognizer(reciptGesture)
     }
     
     private func registerTableViewCells() {
@@ -198,7 +210,7 @@ extension ContactsListViewController: ContactListProtocol {
     }
     
     func displayTransactionRecipt(_ transaction: TransactionViewModel) {
-        // implement the view to shoe the transaction recipt
+        openReciptPopup()
     }
 }
 
@@ -218,3 +230,101 @@ extension ContactsListViewController: UITextFieldDelegate {
         headerView.searchbar.changeLayoutBy(state: .inactive)
     }
 }
+
+extension ContactsListViewController {
+    
+    @objc private func popupViewPanned(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            animateTransitionIfNeeded(to: currentState.opposite, duration: 1)
+            runningAnimators.forEach { $0.pauseAnimation() }
+            animationProgress = runningAnimators.map { $0.fractionComplete }
+            
+        case .changed:
+            let translation = recognizer.translation(in: reciptContainerView)
+            var fraction = -translation.y / popupBottonOffset
+            
+            if currentState == .open { fraction *= -1 }
+            if runningAnimators[0].isReversed { fraction *= -1 }
+            
+            for (index, animator) in runningAnimators.enumerated() {
+                animator.fractionComplete = fraction + animationProgress[index]
+            }
+            
+        case .ended:
+            let yVelocity = recognizer.velocity(in: reciptContainerView).y
+            let shouldClose = yVelocity > 0
+            
+            if yVelocity == 0 {
+                runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }
+                break
+            }
+            
+            switch currentState {
+            case .open:
+                if !shouldClose && !runningAnimators[0].isReversed { runningAnimators.forEach { $0.isReversed = !$0.isReversed } }
+                if shouldClose && runningAnimators[0].isReversed { runningAnimators.forEach { $0.isReversed = !$0.isReversed } }
+            case .closed:
+                if shouldClose && !runningAnimators[0].isReversed { runningAnimators.forEach { $0.isReversed = !$0.isReversed } }
+                if !shouldClose && runningAnimators[0].isReversed { runningAnimators.forEach { $0.isReversed = !$0.isReversed } }
+            }
+            
+            runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }
+            
+        default:
+            ()
+        }
+    }
+    
+    private func animateTransitionIfNeeded(to state: PopupState, duration: TimeInterval) {
+        
+        guard runningAnimators.isEmpty else { return }
+        
+        let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1, animations: {
+            switch state {
+            case .open:
+                self.bottomConstraint.constant = 0
+                self.reciptContainerView.layer.cornerRadius = 20
+                self.overlayView.isHidden = false
+                self.overlayView.alpha = 0.7
+            case .closed:
+                self.bottomConstraint.constant = -self.popupBottonOffset
+                self.reciptContainerView.layer.cornerRadius = 0
+                self.overlayView.alpha = 0
+            }
+            self.view.layoutIfNeeded()
+        })
+        
+        transitionAnimator.addCompletion { position in
+            
+            switch position {
+            case .start:
+                self.currentState = state.opposite
+            case .end:
+                self.currentState = state
+            case .current:
+                ()
+            }
+            
+            switch self.currentState {
+            case .open:
+                self.bottomConstraint.constant = 0
+            case .closed:
+                self.bottomConstraint.constant = -self.popupBottonOffset
+                self.overlayView.isHidden = true
+            }
+            
+            self.runningAnimators.removeAll()
+            
+        }
+        
+        transitionAnimator.startAnimation()
+
+        runningAnimators.append(transitionAnimator)
+    }
+    
+    private func openReciptPopup() {
+        animateTransitionIfNeeded(to: PopupState.open, duration: 1)
+    }
+}
+

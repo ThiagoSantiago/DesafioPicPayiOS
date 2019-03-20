@@ -46,6 +46,10 @@
 		18BD4D302239FD8700A7CBBE /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */; };
 		18BD4D312239FD8700A7CBBE /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */; };
 		18EADB8D224144F700731347 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB8C224144F700731347 /* TransactionViewModel.swift */; };
+		18EADB8F2241D4E500731347 /* PopupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB8E2241D4E500731347 /* PopupState.swift */; };
+		18EADB912241D5D500731347 /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB902241D5D500731347 /* InstantPanGestureRecognizer.swift */; };
+		18EADB932241D79700731347 /* ReciptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB922241D79700731347 /* ReciptView.swift */; };
+		18EADB952241D81100731347 /* ReciptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EADB942241D81100731347 /* ReciptView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,10 @@
 		18BD4D2E2239FD8700A7CBBE /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		18BD4D2F2239FD8700A7CBBE /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		18EADB8C224144F700731347 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		18EADB8E2241D4E500731347 /* PopupState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupState.swift; sourceTree = "<group>"; };
+		18EADB902241D5D500731347 /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		18EADB922241D79700731347 /* ReciptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciptView.swift; sourceTree = "<group>"; };
+		18EADB942241D81100731347 /* ReciptView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciptView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +223,8 @@
 				1848BC8B2238643C00F27019 /* BaseViewController.swift */,
 				1848BC9322388D8100F27019 /* FloatingTextField.swift */,
 				18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */,
+				18EADB8E2241D4E500731347 /* PopupState.swift */,
+				18EADB902241D5D500731347 /* InstantPanGestureRecognizer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -271,6 +281,8 @@
 				18A24E8C223731EF003F0F4A /* HeaderView.xib */,
 				18A24E8E22373F38003F0F4A /* ContactListCell.swift */,
 				18A24E8F22373F38003F0F4A /* ContactListCell.xib */,
+				18EADB922241D79700731347 /* ReciptView.swift */,
+				18EADB942241D81100731347 /* ReciptView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -444,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EADB952241D81100731347 /* ReciptView.xib in Resources */,
 				18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */,
 				1848BC922238787C00F27019 /* NewCardViewController.xib in Resources */,
 				1848BC9822388F8300F27019 /* RegisterNewCardViewController.xib in Resources */,
@@ -493,6 +506,9 @@
 				18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */,
 				18A24EAE22380B33003F0F4A /* UITextField+Extensions.swift in Sources */,
 				18A24E9F22376429003F0F4A /* ContactListInteractor.swift in Sources */,
+				18EADB8F2241D4E500731347 /* PopupState.swift in Sources */,
+				18EADB912241D5D500731347 /* InstantPanGestureRecognizer.swift in Sources */,
+				18EADB932241D79700731347 /* ReciptView.swift in Sources */,
 				18A24E9522375E34003F0F4A /* PicPayApiRequest.swift in Sources */,
 				1848BC9722388F8300F27019 /* RegisterNewCardViewController.swift in Sources */,
 				18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */,

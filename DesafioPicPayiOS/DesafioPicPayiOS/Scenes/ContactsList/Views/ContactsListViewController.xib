@@ -12,10 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsListViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
+                <outlet property="bottomConstraint" destination="r5C-4T-28P" id="Smb-ts-ZIZ"/>
                 <outlet property="errorMessage" destination="La1-X3-bFF" id="GAR-bA-tP8"/>
                 <outlet property="errorView" destination="ihL-XB-gNw" id="b69-2y-7y8"/>
                 <outlet property="headerHeightConstraint" destination="kub-6w-dfZ" id="n1h-Ni-IwW"/>
                 <outlet property="headerView" destination="d8g-d5-h5S" id="02U-8P-sXX"/>
+                <outlet property="overlayView" destination="phG-VT-l5A" id="JRb-Wp-Ffs"/>
+                <outlet property="reciptContainerView" destination="23k-Ah-EYW" id="a1H-Kc-dCJ"/>
+                <outlet property="reciptView" destination="Tyo-Pj-nqG" id="erK-97-9jd"/>
                 <outlet property="tableView" destination="ZwV-7t-zWF" id="3Hy-fF-1gO"/>
                 <outlet property="tryAgainButton" destination="fSF-iB-g27" id="s8a-FI-3iF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -80,19 +84,65 @@
                         <constraint firstItem="La1-X3-bFF" firstAttribute="centerY" secondItem="ihL-XB-gNw" secondAttribute="centerY" constant="10" id="y65-1D-Fwr"/>
                     </constraints>
                 </view>
+                <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phG-VT-l5A">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23k-Ah-EYW">
+                    <rect key="frame" x="0.0" y="707" width="375" height="500"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJU-wf-kW0">
+                            <rect key="frame" x="167.5" y="8" width="40" height="3"/>
+                            <color key="backgroundColor" red="0.23921568627450979" green="0.26666666666666666" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="7dd-Uz-NIW"/>
+                                <constraint firstAttribute="height" constant="3" id="BPM-Ai-VGM"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recibo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBP-Nx-Hd6">
+                            <rect key="frame" x="160" y="22" width="55" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyo-Pj-nqG" customClass="ReciptView" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="59" width="375" height="441"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="500" id="9DN-dE-U3Y"/>
+                        <constraint firstItem="IJU-wf-kW0" firstAttribute="top" secondItem="23k-Ah-EYW" secondAttribute="top" constant="8" id="BRD-BN-9yz"/>
+                        <constraint firstItem="IJU-wf-kW0" firstAttribute="centerX" secondItem="23k-Ah-EYW" secondAttribute="centerX" id="I4r-JB-P9m"/>
+                        <constraint firstItem="oBP-Nx-Hd6" firstAttribute="centerX" secondItem="23k-Ah-EYW" secondAttribute="centerX" id="JGB-QW-dHz"/>
+                        <constraint firstAttribute="bottom" secondItem="Tyo-Pj-nqG" secondAttribute="bottom" id="fHj-19-8By"/>
+                        <constraint firstItem="oBP-Nx-Hd6" firstAttribute="top" secondItem="IJU-wf-kW0" secondAttribute="bottom" constant="11" id="l6E-at-djW"/>
+                        <constraint firstItem="Tyo-Pj-nqG" firstAttribute="leading" secondItem="23k-Ah-EYW" secondAttribute="leading" id="uPm-Db-5aR"/>
+                        <constraint firstItem="Tyo-Pj-nqG" firstAttribute="top" secondItem="IJU-wf-kW0" secondAttribute="bottom" constant="48" id="uzd-cr-Teq"/>
+                        <constraint firstAttribute="trailing" secondItem="Tyo-Pj-nqG" secondAttribute="trailing" id="ztC-ec-p14"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ihL-XB-gNw" firstAttribute="top" secondItem="d8g-d5-h5S" secondAttribute="bottom" id="3mX-SL-W1o"/>
                 <constraint firstAttribute="trailing" secondItem="d8g-d5-h5S" secondAttribute="trailing" id="7mK-HE-ytd"/>
                 <constraint firstItem="ihL-XB-gNw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9rx-PQ-qVp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="23k-Ah-EYW" secondAttribute="trailing" id="A2r-aH-E2Y"/>
+                <constraint firstItem="phG-VT-l5A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Epx-g7-ZlP"/>
+                <constraint firstItem="phG-VT-l5A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HBI-fc-x2I"/>
                 <constraint firstItem="ZwV-7t-zWF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HJg-VE-JeZ"/>
                 <constraint firstItem="d8g-d5-h5S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MHS-9U-0WE"/>
                 <constraint firstItem="d8g-d5-h5S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ogx-le-nlg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZwV-7t-zWF" secondAttribute="bottom" id="VOI-y9-w9B"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ihL-XB-gNw" secondAttribute="bottom" id="Y1H-91-gsl"/>
+                <constraint firstItem="23k-Ah-EYW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gQr-0Q-95B"/>
+                <constraint firstAttribute="trailing" secondItem="phG-VT-l5A" secondAttribute="trailing" id="ic3-7U-bGM"/>
                 <constraint firstItem="ZwV-7t-zWF" firstAttribute="top" secondItem="d8g-d5-h5S" secondAttribute="bottom" id="ihY-X9-WOe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="phG-VT-l5A" secondAttribute="bottom" id="lOC-Yo-JEd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ihL-XB-gNw" secondAttribute="trailing" id="mLs-rY-msy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="23k-Ah-EYW" secondAttribute="bottom" constant="-540" id="r5C-4T-28P"/>
                 <constraint firstAttribute="trailing" secondItem="ZwV-7t-zWF" secondAttribute="trailing" id="w8P-B9-YaF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
