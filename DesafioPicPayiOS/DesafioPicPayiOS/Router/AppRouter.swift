@@ -30,7 +30,11 @@ class AppRouter {
     }
     
     func routeToRegisterNewCard() {
-        let viewController = RegisterNewCardViewController()
+        let presenter = RegisterCardPresenter()
+        let interactor = RegisterCardInteractor(presenter: presenter)
+        let viewController = RegisterNewCardViewController(interactor: interactor)
+        
+        presenter.viewController = viewController
         self.navigation.pushViewController(viewController, animated: true)
     }
     
