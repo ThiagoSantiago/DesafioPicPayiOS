@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol RegisterCardViewProtocol: class {
+    func displayCardSaved(success: Bool)
+    func displayCardRetrieved(card: Card)
+}
+
 class RegisterNewCardViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cardNumber: FloatingTextField!
@@ -17,9 +22,13 @@ class RegisterNewCardViewController: UIViewController {
     @IBOutlet weak var bottonButtonConstraint: NSLayoutConstraint!
     
     var activeTextField = UITextField()
+    var interactor: RegisterCardInteractor?
+    let service = "myService"
     
-    init() {
+    
+    init(interactor: RegisterCardInteractor) {
         super.init(nibName: "RegisterNewCardViewController", bundle: Bundle.main)
+        self.interactor = interactor
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -81,7 +90,12 @@ class RegisterNewCardViewController: UIViewController {
     }
     
     @IBAction func saveCardPressed(_ sender: Any) {
-        AppRouter.shared.routeToPayment(PaymentViewModel())
+        let card = Card(owner: cardOwnerName.text ?? "",
+                        cardNumber: cardNumber.text ?? "",
+                        securityCode: securityCode.text ?? "",
+                        expirationDate: expirationDate.text ?? "")
+        
+        interactor?.saveCard(card)
     }
 }
 
@@ -152,5 +166,20 @@ extension RegisterNewCardViewController: UITextFieldDelegate {
                cardOwnerName.isVaridate() &&
                securityCode.isVaridate() &&
                expirationDate.isVaridate())
+    }
+}
+
+extension RegisterNewCardViewController: RegisterCardViewProtocol {
+    func displayCardSaved(success: Bool) {
+        if success {
+            AppRouter.shared.routeToPayment(PaymentViewModel())
+        }
+    }
+    
+    func displayCardRetrieved(card: Card) {
+        cardOwnerName.text = card.owner
+        cardNumber.text = card.cardNumber
+        securityCode.text = card.securityCode
+        expirationDate.text = card.expirationDate
     }
 }

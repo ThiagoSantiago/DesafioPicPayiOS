@@ -10,4 +10,7 @@ import Foundation
 
 class Constants {
     static let baseUrl = "http://careers.picpay.com"
+    
+    static let picPayCardService = "PicPayCardService"
+    static let picPayAccessGroup = "PicPayAccessGroup"
 }

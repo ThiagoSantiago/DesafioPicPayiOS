@@ -25,6 +25,7 @@ class PaymentViewController: BaseViewController {
     
     var viewModel: PaymentViewModel?
     var interactor: PaymentInteractor?
+    let service = "myService"
     
     init(interactor: PaymentInteractor, viewModel: PaymentViewModel) {
         super.init(nibName: "PaymentViewController", bundle: Bundle.main)
@@ -40,27 +41,38 @@ class PaymentViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        self.view.addGestureRecognizer(tap)
-        
+        setup()
         configViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         valueTextField.becomeFirstResponder()
     }
     
-    func configViews() {
+    private func setup() {
+        addNotificationsObserver()
+    }
+    
+    private func configViews() {
+        addGestures()
+        
         userImage.layer.cornerRadius = 20
         payButton.layer.cornerRadius = 25
         
         valueTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    private func addGestures() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    private func addNotificationsObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {

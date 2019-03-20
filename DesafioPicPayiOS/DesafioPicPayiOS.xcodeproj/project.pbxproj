@@ -38,7 +38,8 @@
 		18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */; };
 		18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */; };
 		18A24EAE22380B33003F0F4A /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */; };
-		18BD4D202239EC0D00A7CBBE /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */; };
+		18BA24CD224299A100F68B34 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA24CC224299A100F68B34 /* Card.swift */; };
+		18BD4D202239EC0D00A7CBBE /* KeychainServiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D1F2239EC0D00A7CBBE /* KeychainServiceWorker.swift */; };
 		18BD4D272239F8D200A7CBBE /* PaymentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D262239F8D200A7CBBE /* PaymentWorker.swift */; };
 		18BD4D292239F90600A7CBBE /* PicPayPaymentServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D282239F90600A7CBBE /* PicPayPaymentServiceSetup.swift */; };
 		18BD4D2B2239FBE800A7CBBE /* PaymentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4D2A2239FBE800A7CBBE /* PaymentInteractor.swift */; };
@@ -54,6 +55,10 @@
 		18EADB992241E50400731347 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB982241E50400731347 /* Double+Extensions.swift */; };
 		18EADB9B2241ED3D00731347 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB9A2241ED3D00731347 /* String+Extensions.swift */; };
 		18EADB9D2241FA3000731347 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB9C2241FA3000731347 /* PaymentViewModel.swift */; };
+		18F99BED2242A19200BDB000 /* RegisterCardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F99BEC2242A19200BDB000 /* RegisterCardInteractor.swift */; };
+		18F99BF02242A26600BDB000 /* RegisterCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F99BEF2242A26600BDB000 /* RegisterCardPresenter.swift */; };
+		95619220B5F9B03A6BABA58D /* Pods_DesafioPicPayiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C8E7611C25C94468C63995 /* Pods_DesafioPicPayiOSTests.framework */; };
+		DB30E500224BFE2517E09BD8 /* Pods_DesafioPicPayiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A41ACB41203C4AE39D61485 /* Pods_DesafioPicPayiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14C8E7611C25C94468C63995 /* Pods_DesafioPicPayiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioPicPayiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18360C032240580900342A07 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		1848BC8B2238643C00F27019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1848BC8F2238783700F27019 /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +108,8 @@
 		18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		18A24EAB2237F87A003F0F4A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
-		18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		18BA24CC224299A100F68B34 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		18BD4D1F2239EC0D00A7CBBE /* KeychainServiceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceWorker.swift; sourceTree = "<group>"; };
 		18BD4D262239F8D200A7CBBE /* PaymentWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWorker.swift; sourceTree = "<group>"; };
 		18BD4D282239F90600A7CBBE /* PicPayPaymentServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPayPaymentServiceSetup.swift; sourceTree = "<group>"; };
 		18BD4D2A2239FBE800A7CBBE /* PaymentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInteractor.swift; sourceTree = "<group>"; };
@@ -118,6 +125,13 @@
 		18EADB982241E50400731347 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		18EADB9A2241ED3D00731347 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		18EADB9C2241FA3000731347 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		18F99BEC2242A19200BDB000 /* RegisterCardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardInteractor.swift; sourceTree = "<group>"; };
+		18F99BEF2242A26600BDB000 /* RegisterCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardPresenter.swift; sourceTree = "<group>"; };
+		1A41ACB41203C4AE39D61485 /* Pods_DesafioPicPayiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioPicPayiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		343A2D8A8C3629689AF6EB8E /* Pods-DesafioPicPayiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		85920E3031DF74A9DF8B0828 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOSTests/Pods-DesafioPicPayiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3F39DA45C00F0FA484173C1 /* Pods-DesafioPicPayiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS.release.xcconfig"; sourceTree = "<group>"; };
+		B2E5C3760C9DCB841A9EDB18 /* Pods-DesafioPicPayiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioPicPayiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioPicPayiOSTests/Pods-DesafioPicPayiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB30E500224BFE2517E09BD8 /* Pods_DesafioPicPayiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95619220B5F9B03A6BABA58D /* Pods_DesafioPicPayiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +157,8 @@
 		1848BC8D223877B200F27019 /* RegisterCard */ = {
 			isa = PBXGroup;
 			children = (
+				18F99BEB2242A17800BDB000 /* Interactor */,
+				18F99BEE2242A24700BDB000 /* Presenter */,
 				1848BC8E2238781700F27019 /* Views */,
 			);
 			path = RegisterCard;
@@ -163,6 +181,8 @@
 				18A24E5A2237231F003F0F4A /* DesafioPicPayiOS */,
 				18A24E6F22372323003F0F4A /* DesafioPicPayiOSTests */,
 				18A24E592237231F003F0F4A /* Products */,
+				572A771B0E8F7DEDA000F8C2 /* Pods */,
+				32EBEBF5FDAC58A2F0A7D28F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,7 +250,6 @@
 				18A24E9A22376001003F0F4A /* Constants.swift */,
 				1848BC8B2238643C00F27019 /* BaseViewController.swift */,
 				1848BC9322388D8100F27019 /* FloatingTextField.swift */,
-				18BD4D1F2239EC0D00A7CBBE /* KeychainService.swift */,
 				18EADB8E2241D4E500731347 /* PopupState.swift */,
 				18EADB902241D5D500731347 /* InstantPanGestureRecognizer.swift */,
 			);
@@ -309,6 +328,7 @@
 			children = (
 				18A24EA4223765F0003F0F4A /* ContactListWorker.swift */,
 				18BD4D262239F8D200A7CBBE /* PaymentWorker.swift */,
+				18BD4D1F2239EC0D00A7CBBE /* KeychainServiceWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -349,6 +369,7 @@
 			children = (
 				18EADB8B224144CA00731347 /* ViewModel */,
 				18360C032240580900342A07 /* Payment.swift */,
+				18BA24CC224299A100F68B34 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +408,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		18F99BEB2242A17800BDB000 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				18F99BEC2242A19200BDB000 /* RegisterCardInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		18F99BEE2242A24700BDB000 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18F99BEF2242A26600BDB000 /* RegisterCardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		32EBEBF5FDAC58A2F0A7D28F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A41ACB41203C4AE39D61485 /* Pods_DesafioPicPayiOS.framework */,
+				14C8E7611C25C94468C63995 /* Pods_DesafioPicPayiOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		572A771B0E8F7DEDA000F8C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				343A2D8A8C3629689AF6EB8E /* Pods-DesafioPicPayiOS.debug.xcconfig */,
+				A3F39DA45C00F0FA484173C1 /* Pods-DesafioPicPayiOS.release.xcconfig */,
+				85920E3031DF74A9DF8B0828 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */,
+				B2E5C3760C9DCB841A9EDB18 /* Pods-DesafioPicPayiOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,9 +451,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A24E7522372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOS" */;
 			buildPhases = (
+				93D7D068D0134FD1395863B0 /* [CP] Check Pods Manifest.lock */,
 				18A24E542237231F003F0F4A /* Sources */,
 				18A24E552237231F003F0F4A /* Frameworks */,
 				18A24E562237231F003F0F4A /* Resources */,
+				41E0E86E5D8712A690B86907 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +470,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A24E7822372323003F0F4A /* Build configuration list for PBXNativeTarget "DesafioPicPayiOSTests" */;
 			buildPhases = (
+				2B29E9F4DF54D9F224C18D51 /* [CP] Check Pods Manifest.lock */,
 				18A24E6822372323003F0F4A /* Sources */,
 				18A24E6922372323003F0F4A /* Frameworks */,
 				18A24E6A22372323003F0F4A /* Resources */,
@@ -489,6 +549,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B29E9F4DF54D9F224C18D51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioPicPayiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41E0E86E5D8712A690B86907 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesafioPicPayiOS/Pods-DesafioPicPayiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93D7D068D0134FD1395863B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioPicPayiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18A24E542237231F003F0F4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -499,6 +616,7 @@
 				18360C042240580900342A07 /* Payment.swift in Sources */,
 				18EADB972241E39700731347 /* Int+Extensions.swift in Sources */,
 				18EADB9B2241ED3D00731347 /* String+Extensions.swift in Sources */,
+				18F99BF02242A26600BDB000 /* RegisterCardPresenter.swift in Sources */,
 				18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */,
 				18A24E9D22376334003F0F4A /* ContactListPresenter.swift in Sources */,
 				18BD4D2D2239FCF600A7CBBE /* PaymentPresenter.swift in Sources */,
@@ -508,13 +626,15 @@
 				18BD4D302239FD8700A7CBBE /* PaymentViewController.swift in Sources */,
 				18BD4D272239F8D200A7CBBE /* PaymentWorker.swift in Sources */,
 				1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */,
-				18BD4D202239EC0D00A7CBBE /* KeychainService.swift in Sources */,
+				18BD4D202239EC0D00A7CBBE /* KeychainServiceWorker.swift in Sources */,
 				18BD4D292239F90600A7CBBE /* PicPayPaymentServiceSetup.swift in Sources */,
+				18F99BED2242A19200BDB000 /* RegisterCardInteractor.swift in Sources */,
 				18A24E9722375E8C003F0F4A /* PicPayApiSetupProtocol.swift in Sources */,
 				18BD4D2B2239FBE800A7CBBE /* PaymentInteractor.swift in Sources */,
 				18A24E8022372D1E003F0F4A /* AppRouter.swift in Sources */,
 				18A24E9322375DF9003F0F4A /* PicPayApiError.swift in Sources */,
 				18A24E9B22376001003F0F4A /* Constants.swift in Sources */,
+				18BA24CD224299A100F68B34 /* Card.swift in Sources */,
 				18A24EA5223765F0003F0F4A /* ContactListWorker.swift in Sources */,
 				18EADB9D2241FA3000731347 /* PaymentViewModel.swift in Sources */,
 				18A24E9922375F02003F0F4A /* PicPayContactListServiceSetup.swift in Sources */,
@@ -682,6 +802,7 @@
 		};
 		18A24E7622372323003F0F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343A2D8A8C3629689AF6EB8E /* Pods-DesafioPicPayiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -700,6 +821,7 @@
 		};
 		18A24E7722372323003F0F4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F39DA45C00F0FA484173C1 /* Pods-DesafioPicPayiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -718,6 +840,7 @@
 		};
 		18A24E7922372323003F0F4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85920E3031DF74A9DF8B0828 /* Pods-DesafioPicPayiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -739,6 +862,7 @@
 		};
 		18A24E7A22372323003F0F4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2E5C3760C9DCB841A9EDB18 /* Pods-DesafioPicPayiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
