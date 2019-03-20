@@ -20,9 +20,9 @@ class PaymentWorker {
     
     
     typealias MakeAPaymentSuccess = (_ result: Payment) -> Void
-    func makeAPayment(success: @escaping MakeAPaymentSuccess, failure: @escaping Failure) {
+    func makeAPayment(paymentData: PaymentViewModel, success: @escaping MakeAPaymentSuccess, failure: @escaping Failure) {
         
-        requester.request(PicPayPaymentServiceSetup.makeAPayment()) { result in
+        requester.request(PicPayPaymentServiceSetup.makeAPayment(data: paymentData)) { result in
             switch result{
             case let .success(data):
                 

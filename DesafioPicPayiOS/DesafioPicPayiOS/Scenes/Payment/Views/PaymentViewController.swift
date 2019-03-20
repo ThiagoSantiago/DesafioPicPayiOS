@@ -23,11 +23,14 @@ class PaymentViewController: BaseViewController {
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var bottonButtonConstraint: NSLayoutConstraint!
     
+    var viewModel: PaymentViewModel?
     var interactor: PaymentInteractor?
     
-    init(interactor: PaymentInteractor) {
+    init(interactor: PaymentInteractor, viewModel: PaymentViewModel) {
         super.init(nibName: "PaymentViewController", bundle: Bundle.main)
+        self.viewModel = viewModel
         self.interactor = interactor
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -89,7 +92,9 @@ class PaymentViewController: BaseViewController {
     }
     
     @IBAction func payButtonPressed(_ sender: Any) {
-        interactor?.makeApayment()
+        if let paymentData = viewModel {
+            interactor?.makeApayment(with: paymentData)
+        }
     }
 }
 

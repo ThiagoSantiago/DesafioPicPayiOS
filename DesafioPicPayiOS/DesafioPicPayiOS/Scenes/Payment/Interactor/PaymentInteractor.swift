@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PaymentInteractorProtocol {
-    func makeApayment()
+    func makeApayment(with paymentData: PaymentViewModel)
 }
 
 class PaymentInteractor: PaymentInteractorProtocol {
@@ -21,9 +21,9 @@ class PaymentInteractor: PaymentInteractorProtocol {
         self.worker = worker
     }
     
-    func makeApayment() {
+    func makeApayment(with paymentData: PaymentViewModel) {
         presenter?.presentLoadingView()
-        worker?.makeAPayment(success: { result in
+        worker?.makeAPayment(paymentData: paymentData, success: { result in
             DispatchQueue.main.async {
                 self.presenter?.closeLoadingView()
                 let viewModel = self.treatPaymentData(result: result)

@@ -53,6 +53,7 @@
 		18EADB972241E39700731347 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB962241E39700731347 /* Int+Extensions.swift */; };
 		18EADB992241E50400731347 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB982241E50400731347 /* Double+Extensions.swift */; };
 		18EADB9B2241ED3D00731347 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB9A2241ED3D00731347 /* String+Extensions.swift */; };
+		18EADB9D2241FA3000731347 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB9C2241FA3000731347 /* PaymentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		18EADB962241E39700731347 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		18EADB982241E50400731347 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		18EADB9A2241ED3D00731347 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		18EADB9C2241FA3000731347 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				18EADB8C224144F700731347 /* TransactionViewModel.swift */,
+				18EADB9C2241FA3000731347 /* PaymentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				18A24E9322375DF9003F0F4A /* PicPayApiError.swift in Sources */,
 				18A24E9B22376001003F0F4A /* Constants.swift in Sources */,
 				18A24EA5223765F0003F0F4A /* ContactListWorker.swift in Sources */,
+				18EADB9D2241FA3000731347 /* PaymentViewModel.swift in Sources */,
 				18A24E9922375F02003F0F4A /* PicPayContactListServiceSetup.swift in Sources */,
 				18A24EAC2237F87A003F0F4A /* ImageDownloader.swift in Sources */,
 				18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */,

@@ -10,12 +10,12 @@ import Foundation
 
 enum PicPayPaymentServiceSetup: PicPayApiSetupProtocol {
     
-    case makeAPayment()
+    case makeAPayment(data: PaymentViewModel)
     
     var endpoint: String {
         switch self {
             
-        case .makeAPayment():
+        case .makeAPayment(_):
             let url = Constants.baseUrl+"/tests/mobdev/transaction"
             
             return url
@@ -24,7 +24,7 @@ enum PicPayPaymentServiceSetup: PicPayApiSetupProtocol {
     
     var method: HTTPMethod {
         switch self {
-        case .makeAPayment():
+        case .makeAPayment(_):
             return .post
         }
     }
@@ -35,12 +35,12 @@ enum PicPayPaymentServiceSetup: PicPayApiSetupProtocol {
     
     var parameters: [String : Any] {
         switch self {
-        case .makeAPayment():
-            return ["card_number" : "1111111111111111",
-                    "cvv" : 789,
-                    "value" : 79.9,
-                    "expiry_date" : "01/08",
-                    "destination_user_id" : 1002]
+        case .makeAPayment(let paymentData):
+            return ["card_number" : paymentData.cardNumber,
+                    "cvv" : paymentData.securityCode,
+                    "value" : paymentData.value,
+                    "expiry_date" : paymentData.expiryDate,
+                    "destination_user_id" : paymentData.destinationUser]
         }
     }
 }
