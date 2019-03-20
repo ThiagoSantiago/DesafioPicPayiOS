@@ -63,7 +63,7 @@ class RegisterNewCardViewController: UIViewController {
                 if self.activeTextField.frame.origin.y + 150 > self.view.frame.height - keyboardSize.height {
                     self.view.frame.origin.y -= (self.activeTextField.frame.origin.y + 150) - (self.view.frame.height - keyboardSize.height)
                 
-                    self.bottonButtonConstraint.constant = (self.activeTextField.frame.origin.y + 30) - (self.view.frame.height - keyboardSize.height)
+                    self.bottonButtonConstraint.constant = (self.activeTextField.frame.origin.y + 160) - (keyboardSize.height)
                 }
             }
         }

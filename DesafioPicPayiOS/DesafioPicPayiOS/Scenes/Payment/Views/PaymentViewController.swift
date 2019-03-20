@@ -20,8 +20,9 @@ class PaymentViewController: BaseViewController {
     @IBOutlet weak var creditCard: UILabel!
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet weak var bottonButtonConstraint: NSLayoutConstraint!
     
-//    var paymentData: PaymentViewModel?
     var interactor: PaymentInteractor?
     
     init(interactor: PaymentInteractor) {
@@ -35,16 +36,56 @@ class PaymentViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+        
         configViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        valueTextField.becomeFirstResponder()
     }
     
     func configViews() {
         userImage.layer.cornerRadius = 20
         payButton.layer.cornerRadius = 25
+        
+        valueTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let amountString = textField.text?.currencyInputFormatting() {
+            textField.text = amountString
+        }
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.bottonButtonConstraint.constant = (keyboardSize.height) + payButton.bounds.height + 20
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+            self.bottonButtonConstraint.constant = 24
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        AppRouter.shared.popViewController()
     }
     
     @IBAction func editCreditCardPressed(_ sender: Any) {
-        AppRouter.shared.routeToHome()
+        AppRouter.shared.routeToRegisterNewCard()
     }
     
     @IBAction func payButtonPressed(_ sender: Any) {

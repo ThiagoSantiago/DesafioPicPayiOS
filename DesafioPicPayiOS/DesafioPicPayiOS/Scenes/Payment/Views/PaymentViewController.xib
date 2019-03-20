@@ -12,10 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
+                <outlet property="bottonButtonConstraint" destination="QAh-fp-5go" id="FaT-7K-K6t"/>
                 <outlet property="creditCard" destination="w4L-Sh-yrX" id="H1g-Qw-KJq"/>
                 <outlet property="payButton" destination="8HB-HN-BPH" id="RG6-n7-kwM"/>
                 <outlet property="userImage" destination="y5T-XL-VmN" id="oAc-5v-pfC"/>
                 <outlet property="userName" destination="fjz-Y4-zGe" id="fbb-69-EAg"/>
+                <outlet property="valueTextField" destination="pdf-oy-WNx" id="QVI-qn-F7f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,8 +33,11 @@
                         <constraint firstAttribute="width" constant="12" id="o3V-ak-g1S"/>
                     </constraints>
                     <state key="normal" image="back_button"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="5EI-rS-tKD"/>
+                    </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="y5T-XL-VmN">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="y5T-XL-VmN">
                     <rect key="frame" x="167.5" y="60" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="bKe-qY-4I5"/>
@@ -45,11 +50,11 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-oy-WNx">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0,00" textAlignment="center" minimumFontSize="54" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-oy-WNx">
                     <rect key="frame" x="129" y="160" width="117" height="65"/>
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="54"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcT-bf-tIU">
                     <rect key="frame" x="104" y="182" width="23" height="21"/>
@@ -81,7 +86,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HB-HN-BPH">
-                    <rect key="frame" x="12" y="605" width="351" height="50"/>
+                    <rect key="frame" x="12" y="593" width="351" height="50"/>
                     <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="eIJ-dH-Yfh"/>
@@ -105,7 +110,7 @@
                 <constraint firstItem="fjz-Y4-zGe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Iqo-My-ceR"/>
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="centerY" secondItem="5wP-Pa-HOm" secondAttribute="centerY" id="M5p-ov-9uc"/>
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="leading" secondItem="5wP-Pa-HOm" secondAttribute="trailing" constant="-13" id="PoE-X7-piT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8HB-HN-BPH" secondAttribute="bottom" constant="12" id="QAh-fp-5go"/>
+                <constraint firstAttribute="bottom" secondItem="8HB-HN-BPH" secondAttribute="bottom" constant="24" id="QAh-fp-5go"/>
                 <constraint firstItem="hcT-bf-tIU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="VVQ-Xq-2rg"/>
                 <constraint firstItem="XZn-YB-uJ5" firstAttribute="top" secondItem="pdf-oy-WNx" secondAttribute="bottom" constant="40" id="XXn-FA-QLC"/>
                 <constraint firstItem="y5T-XL-VmN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e4Q-zx-QUO"/>

@@ -9,9 +9,11 @@
 import UIKit
 
 class ReciptView: UIView {
-    
+    @IBOutlet private weak var userName: UILabel!
     @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var transactionId: UILabel!
     @IBOutlet private weak var userImage: UIImageView!
+    @IBOutlet private weak var transactionDate: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,5 +31,11 @@ class ReciptView: UIView {
         
         userImage.layer.cornerRadius = 50
     }
-
+    
+    func setContent(_ data: TransactionViewModel) {
+        userName.text = data.username
+        transactionDate.text = data.time
+        userImage.loadImage(from: data.userImg)
+        transactionId.text = "Transação: \(data.transactionId)"
+    }
 }

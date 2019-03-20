@@ -50,6 +50,9 @@
 		18EADB912241D5D500731347 /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB902241D5D500731347 /* InstantPanGestureRecognizer.swift */; };
 		18EADB932241D79700731347 /* ReciptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB922241D79700731347 /* ReciptView.swift */; };
 		18EADB952241D81100731347 /* ReciptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EADB942241D81100731347 /* ReciptView.xib */; };
+		18EADB972241E39700731347 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB962241E39700731347 /* Int+Extensions.swift */; };
+		18EADB992241E50400731347 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB982241E50400731347 /* Double+Extensions.swift */; };
+		18EADB9B2241ED3D00731347 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EADB9A2241ED3D00731347 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		18EADB902241D5D500731347 /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		18EADB922241D79700731347 /* ReciptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciptView.swift; sourceTree = "<group>"; };
 		18EADB942241D81100731347 /* ReciptView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciptView.xib; sourceTree = "<group>"; };
+		18EADB962241E39700731347 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		18EADB982241E50400731347 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		18EADB9A2241ED3D00731347 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +324,9 @@
 			children = (
 				18A24EA92237F812003F0F4A /* UIImage+Extensions.swift */,
 				18A24EAD22380B33003F0F4A /* UITextField+Extensions.swift */,
+				18EADB962241E39700731347 /* Int+Extensions.swift */,
+				18EADB982241E50400731347 /* Double+Extensions.swift */,
+				18EADB9A2241ED3D00731347 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,11 +494,14 @@
 				18A24EA2223764D5003F0F4A /* User.swift in Sources */,
 				1848BC902238783700F27019 /* NewCardViewController.swift in Sources */,
 				18360C042240580900342A07 /* Payment.swift in Sources */,
+				18EADB972241E39700731347 /* Int+Extensions.swift in Sources */,
+				18EADB9B2241ED3D00731347 /* String+Extensions.swift in Sources */,
 				18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */,
 				18A24E9D22376334003F0F4A /* ContactListPresenter.swift in Sources */,
 				18BD4D2D2239FCF600A7CBBE /* PaymentPresenter.swift in Sources */,
 				1848BC9422388D8100F27019 /* FloatingTextField.swift in Sources */,
 				18A24E9022373F38003F0F4A /* ContactListCell.swift in Sources */,
+				18EADB992241E50400731347 /* Double+Extensions.swift in Sources */,
 				18BD4D302239FD8700A7CBBE /* PaymentViewController.swift in Sources */,
 				18BD4D272239F8D200A7CBBE /* PaymentWorker.swift in Sources */,
 				1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */,

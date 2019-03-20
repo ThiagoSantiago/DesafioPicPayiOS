@@ -13,7 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReciptView" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="f6f-4M-hd9" id="pnr-dk-ClQ"/>
+                <outlet property="transactionDate" destination="Wst-Je-ZcW" id="XpA-Ey-dYi"/>
+                <outlet property="transactionId" destination="ilx-il-Qd4" id="4NZ-CF-an6"/>
                 <outlet property="userImage" destination="dS5-9H-Jfd" id="tyX-VF-zqs"/>
+                <outlet property="userName" destination="ezs-Z9-oF9" id="lcd-yK-b1N"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

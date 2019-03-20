@@ -210,6 +210,7 @@ extension ContactsListViewController: ContactListProtocol {
     }
     
     func displayTransactionRecipt(_ transaction: TransactionViewModel) {
+        reciptView.setContent(transaction)
         openReciptPopup()
     }
 }
