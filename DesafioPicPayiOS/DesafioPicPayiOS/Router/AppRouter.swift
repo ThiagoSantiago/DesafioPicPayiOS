@@ -25,11 +25,7 @@ class AppRouter {
     }
     
     func routeToNewCard(user: UserViewModel) {
-        let presenter = RegisterCardPresenter()
-        let interactor = RegisterCardInteractor(presenter: presenter)
-        let viewController = NewCardViewController(interactor: interactor, viewModel: user)
-        
-        presenter.viewController = viewController
+        let viewController = NewCardViewController(viewModel: user)
         self.navigation.pushViewController(viewController, animated: true)
     }
     

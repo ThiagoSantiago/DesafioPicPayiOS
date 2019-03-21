@@ -11,12 +11,12 @@ import Foundation
 import Foundation
 
 struct TransactionViewModel {
-    let time: String
-    let card: String
-    let value: String
-    let userImg: String
-    let username: String
-    let transactionId: Int
+    var time: String
+    var card: String
+    var value: String
+    var userImg: String
+    var username: String
+    var transactionId: Int
 }
 
 extension TransactionViewModel: Equatable {

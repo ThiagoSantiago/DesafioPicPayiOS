@@ -12,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReciptView" customModule="DesafioPicPayiOS" customModuleProvider="target">
             <connections>
+                <outlet property="cardDebitedAmount" destination="YNC-R5-b5L" id="Jvy-9p-hFk"/>
+                <outlet property="cardLabel" destination="dAA-yF-Onp" id="Xdr-6Q-JYh"/>
                 <outlet property="containerView" destination="f6f-4M-hd9" id="pnr-dk-ClQ"/>
+                <outlet property="totalValue" destination="xOa-TK-ato" id="ejh-VJ-P0b"/>
                 <outlet property="transactionDate" destination="Wst-Je-ZcW" id="XpA-Ey-dYi"/>
                 <outlet property="transactionId" destination="ilx-il-Qd4" id="4NZ-CF-an6"/>
                 <outlet property="userImage" destination="dS5-9H-Jfd" id="tyX-VF-zqs"/>
@@ -20,7 +23,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="f6f-4M-hd9">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="f6f-4M-hd9">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>

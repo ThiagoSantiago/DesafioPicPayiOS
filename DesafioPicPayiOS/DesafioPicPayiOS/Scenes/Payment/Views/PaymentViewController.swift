@@ -135,7 +135,9 @@ extension PaymentViewController: PaymentViewProtocol {
     }
     
     func displaySucces(_ transaction: TransactionViewModel) {
-        AppRouter.shared.popToHome(with: transaction)
+        var transactionViewModel = transaction
+        transactionViewModel.card = String(viewModel?.card?.cardNumber.suffix(4) ?? "----")
+        AppRouter.shared.popToHome(with: transactionViewModel)
     }
     
     func displayError(message: String) {

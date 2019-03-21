@@ -11,9 +11,10 @@ import UIKit
 protocol ContactListProtocol: class {
     func hideLoadingView()
     func displayLoadingView()
+    func displayCardSaved(_ card: Card?)
     func displayError(_ message: String)
-    func displayTransactionRecipt(_ transaction: TransactionViewModel)
     func displayUsers(_ list: [UserViewModel])
+    func displayTransactionRecipt(_ transaction: TransactionViewModel)
 }
 
 class ContactsListViewController: BaseViewController {
@@ -28,6 +29,7 @@ class ContactsListViewController: BaseViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
+    var userSelected: UserViewModel?
     var interactor: ContactListInteractor?
     var tableViewData: [UserViewModel] = []
     
@@ -106,7 +108,8 @@ extension ContactsListViewController: UITableViewDataSource {
 extension ContactsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismissKeyboard()
-        AppRouter.shared.routeToNewCard(user: tableViewData[indexPath.row])
+        userSelected = tableViewData[indexPath.row]
+        interactor?.getCardSaved()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -184,6 +187,17 @@ extension ContactsListViewController: UITableViewDelegate {
 }
 
 extension ContactsListViewController: ContactListProtocol {
+    func displayCardSaved(_ card: Card?) {
+        if card != nil {
+            guard let userViewModel = userSelected else { return }
+            let paymentModel = PaymentViewModel(card: card, value: nil, destinationUser: userViewModel)
+            AppRouter.shared.routeToPayment(paymentModel)
+        } else {
+            guard let userViewModel = userSelected else { return }
+            AppRouter.shared.routeToNewCard(user: userViewModel)
+        }
+    }
+    
     func hideLoadingView() {
         self.hideLoader()
     }

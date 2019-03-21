@@ -105,9 +105,9 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyo-Pj-nqG" customClass="ReciptView" customModule="DesafioPicPayiOS" customModuleProvider="target">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyo-Pj-nqG" customClass="ReciptView" customModule="DesafioPicPayiOS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="59" width="375" height="441"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,7 +129,7 @@
                 <constraint firstItem="ihL-XB-gNw" firstAttribute="top" secondItem="d8g-d5-h5S" secondAttribute="bottom" id="3mX-SL-W1o"/>
                 <constraint firstAttribute="trailing" secondItem="d8g-d5-h5S" secondAttribute="trailing" id="7mK-HE-ytd"/>
                 <constraint firstItem="ihL-XB-gNw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9rx-PQ-qVp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="23k-Ah-EYW" secondAttribute="trailing" id="A2r-aH-E2Y"/>
+                <constraint firstAttribute="trailing" secondItem="23k-Ah-EYW" secondAttribute="trailing" id="A2r-aH-E2Y"/>
                 <constraint firstItem="phG-VT-l5A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Epx-g7-ZlP"/>
                 <constraint firstItem="phG-VT-l5A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HBI-fc-x2I"/>
                 <constraint firstItem="ZwV-7t-zWF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HJg-VE-JeZ"/>
@@ -137,7 +137,7 @@
                 <constraint firstItem="d8g-d5-h5S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ogx-le-nlg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZwV-7t-zWF" secondAttribute="bottom" id="VOI-y9-w9B"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ihL-XB-gNw" secondAttribute="bottom" id="Y1H-91-gsl"/>
-                <constraint firstItem="23k-Ah-EYW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gQr-0Q-95B"/>
+                <constraint firstItem="23k-Ah-EYW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gQr-0Q-95B"/>
                 <constraint firstAttribute="trailing" secondItem="phG-VT-l5A" secondAttribute="trailing" id="ic3-7U-bGM"/>
                 <constraint firstItem="ZwV-7t-zWF" firstAttribute="top" secondItem="d8g-d5-h5S" secondAttribute="bottom" id="ihY-X9-WOe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="phG-VT-l5A" secondAttribute="bottom" id="lOC-Yo-JEd"/>

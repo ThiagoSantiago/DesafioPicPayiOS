@@ -43,6 +43,12 @@ class ContactListInteractor: ContactListInteractorProtocol {
         })
     }
     
+    func getCardSaved() {
+        let cardSaved = KeychainServiceWorker().loadCard()
+        
+        presenter?.presentCardSaved(cardSaved: cardSaved)
+    }
+    
     private func treatResultData(result: UsersList) -> [UserViewModel] {
         return result.map { UserViewModel(id: $0.id,
                                           name: $0.name,

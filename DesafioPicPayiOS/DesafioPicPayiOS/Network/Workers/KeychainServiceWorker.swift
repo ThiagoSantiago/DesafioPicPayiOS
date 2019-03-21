@@ -24,12 +24,14 @@ class KeychainServiceWorker: NSObject {
                 saveOwnerSuccessful)
     }
     
-    func loadCard() -> Card {
+    func loadCard() -> Card? {
         
-        let cardNumberRetrieved: String = KeychainWrapper.standard.string(forKey: "cardNumber") ?? ""
-        let securityCodeRetrieved: String = KeychainWrapper.standard.string(forKey: "securityCode") ?? ""
-        let expiryDateRetrieved: String = KeychainWrapper.standard.string(forKey: "expiryDate") ?? ""
-        let ownerRetrieved: String = KeychainWrapper.standard.string(forKey: "owner") ?? ""
+        guard let cardNumberRetrieved: String = KeychainWrapper.standard.string(forKey: "cardNumber"),
+        let securityCodeRetrieved: String = KeychainWrapper.standard.string(forKey: "securityCode"),
+        let expiryDateRetrieved: String = KeychainWrapper.standard.string(forKey: "expiryDate"),
+        let ownerRetrieved: String = KeychainWrapper.standard.string(forKey: "owner") else {
+                return nil
+        }
         
         return Card(owner: ownerRetrieved, cardNumber: cardNumberRetrieved, securityCode: securityCodeRetrieved, expirationDate: expiryDateRetrieved)
     }

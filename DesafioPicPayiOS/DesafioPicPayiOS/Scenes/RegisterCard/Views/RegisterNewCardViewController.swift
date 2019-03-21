@@ -98,10 +98,15 @@ class RegisterNewCardViewController: UIViewController {
     }
     
     @IBAction func saveCardPressed(_ sender: Any) {
-        let card = Card(owner: cardOwnerName.text ?? "",
-                        cardNumber: cardNumber.text ?? "",
-                        securityCode: securityCode.text ?? "",
-                        expirationDate: expirationDate.text ?? "")
+        guard let cardOwner = cardOwnerName.text,
+            let number = cardNumber.text,
+            let cvv = securityCode.text,
+            let expirate = expirationDate.text else { return }
+        
+        let card = Card(owner: cardOwner,
+                        cardNumber: number,
+                        securityCode: cvv,
+                        expirationDate: expirate)
         
         viewModel?.card = card
         interactor?.saveCard(card)
@@ -123,7 +128,7 @@ extension RegisterNewCardViewController: UITextFieldDelegate {
             textField.text = modifyCreditCardString(creditCardString: textField.text ?? "")
             return count <= 19
         case 1:
-            return count <= 50
+            return count <= 30
         case 2:
             textField.text = modifyExpirationDateString(date: textField.text ?? "")
             return count <= 5
@@ -181,8 +186,12 @@ extension RegisterNewCardViewController: UITextFieldDelegate {
 extension RegisterNewCardViewController: RegisterCardViewProtocol {
     func displayCardSaved(success: Bool) {
         if success {
-            guard let paymentModel = viewModel else { return }
-            AppRouter.shared.routeToPayment(paymentModel)
+            if isEditingCard {
+                AppRouter.shared.popViewController()
+            }else {
+                guard let paymentModel = viewModel else { return }
+                AppRouter.shared.routeToPayment(paymentModel)
+            }
         }
     }
     

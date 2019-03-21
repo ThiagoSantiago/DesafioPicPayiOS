@@ -12,6 +12,7 @@ protocol ContactListPresenterProtocol {
     func closeLoadingView()
     func presentLoadingView()
     func presentError(message: String)
+    func presentCardSaved(cardSaved: Card?)
     func presentUsers(list: [UserViewModel])
 }
 
@@ -32,6 +33,10 @@ class ContactListPresenter: ContactListPresenterProtocol {
         DispatchQueue.main.async {
             self.viewController?.displayError(message)
         }
+    }
+    
+    func presentCardSaved(cardSaved: Card?) {
+        viewController?.displayCardSaved(cardSaved)
     }
     
     func presentUsers(list: [UserViewModel]) {

@@ -10,10 +10,13 @@ import UIKit
 
 class ReciptView: UIView {
     @IBOutlet private weak var userName: UILabel!
+    @IBOutlet private weak var cardLabel: UILabel!
+    @IBOutlet private weak var totalValue: UILabel!
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var transactionId: UILabel!
     @IBOutlet private weak var userImage: UIImageView!
     @IBOutlet private weak var transactionDate: UILabel!
+    @IBOutlet private weak var cardDebitedAmount: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,9 +36,14 @@ class ReciptView: UIView {
     }
     
     func setContent(_ data: TransactionViewModel) {
+        let last4Numbers = data.card.suffix(4)
+        
         userName.text = data.username
         transactionDate.text = data.time
+        totalValue.text = "R$ \(data.value)"
         userImage.loadImage(from: data.userImg)
+        cardDebitedAmount.text = "R$ \(data.value)"
+        cardLabel.text = "Mastercard \(last4Numbers)"
         transactionId.text = "Transação: \(data.transactionId)"
     }
 }
