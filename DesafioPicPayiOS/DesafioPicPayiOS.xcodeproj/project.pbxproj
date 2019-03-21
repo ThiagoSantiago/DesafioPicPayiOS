@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181FFC6A2243CB4000892A5E /* PaymentInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFC692243CB4000892A5E /* PaymentInteractorTests.swift */; };
 		18360C042240580900342A07 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18360C032240580900342A07 /* Payment.swift */; };
 		1848BC8C2238643C00F27019 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8B2238643C00F27019 /* BaseViewController.swift */; };
 		1848BC902238783700F27019 /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC8F2238783700F27019 /* NewCardViewController.swift */; };
@@ -82,6 +83,7 @@
 
 /* Begin PBXFileReference section */
 		14C8E7611C25C94468C63995 /* Pods_DesafioPicPayiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioPicPayiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		181FFC692243CB4000892A5E /* PaymentInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInteractorTests.swift; sourceTree = "<group>"; };
 		18360C032240580900342A07 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		1848BC8B2238643C00F27019 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1848BC8F2238783700F27019 /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				1891662F2243532B00F64E22 /* PaymentWorkerTests.swift */,
+				181FFC692243CB4000892A5E /* PaymentInteractorTests.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				189166232242D05F00F64E22 /* AppRouterTests.swift in Sources */,
 				189166212242C76400F64E22 /* ContactListWorkerTests.swift in Sources */,
 				1891663622435FA800F64E22 /* PaymentPresenterMock.swift in Sources */,
+				181FFC6A2243CB4000892A5E /* PaymentInteractorTests.swift in Sources */,
 				189166302243532B00F64E22 /* PaymentWorkerTests.swift in Sources */,
 				1891661D2242B6A300F64E22 /* PicPayApiRequestMock.swift in Sources */,
 				1891662B2243463200F64E22 /* ContactListInteractorTests.swift in Sources */,
