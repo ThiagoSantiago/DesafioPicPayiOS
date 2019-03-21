@@ -29,3 +29,21 @@ struct Transaction: Decodable {
         case destinationUser = "destination_user"
     }
 }
+
+extension Payment: Equatable {
+    static func == (lhs: Payment, rhs: Payment) -> Bool {
+        return lhs.transaction == rhs.transaction
+    }
+}
+
+extension Transaction: Equatable {
+    static func == (lhs: Transaction, rhs: Transaction) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.value == rhs.value &&
+        lhs.status == rhs.status &&
+        lhs.success == rhs.success &&
+        lhs.timestamp == rhs.timestamp &&
+        lhs.destinationUser == rhs.destinationUser
+    }
+}
+

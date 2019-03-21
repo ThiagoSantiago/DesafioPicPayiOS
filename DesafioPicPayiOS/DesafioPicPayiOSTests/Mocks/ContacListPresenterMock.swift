@@ -8,7 +8,6 @@
 
 @testable import DesafioPicPayiOS
 
-
 class ContactListPresenterMock: ContactListPresenter {
     var card: Card?
     var viewModel: [UserViewModel]?

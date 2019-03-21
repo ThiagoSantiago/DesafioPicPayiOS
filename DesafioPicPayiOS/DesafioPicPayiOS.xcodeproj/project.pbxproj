@@ -21,6 +21,10 @@
 		189166262242EC1500F64E22 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 189166252242EC1500F64E22 /* users.json */; };
 		18916629224318A300F64E22 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18916628224318A300F64E22 /* UIColor+Extensions.swift */; };
 		1891662B2243463200F64E22 /* ContactListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891662A2243463200F64E22 /* ContactListInteractorTests.swift */; };
+		189166302243532B00F64E22 /* PaymentWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891662F2243532B00F64E22 /* PaymentWorkerTests.swift */; };
+		18916632224354C500F64E22 /* payment_approved.json in Resources */ = {isa = PBXBuildFile; fileRef = 18916631224354C500F64E22 /* payment_approved.json */; };
+		1891663422435BC700F64E22 /* payment_repproved.json in Resources */ = {isa = PBXBuildFile; fileRef = 1891663322435BC700F64E22 /* payment_repproved.json */; };
+		1891663622435FA800F64E22 /* PaymentPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891663522435FA800F64E22 /* PaymentPresenterMock.swift */; };
 		18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E5B2237231F003F0F4A /* AppDelegate.swift */; };
 		18A24E6322372323003F0F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6222372323003F0F4A /* Assets.xcassets */; };
 		18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6422372323003F0F4A /* LaunchScreen.storyboard */; };
@@ -93,6 +97,10 @@
 		189166272242EE0300F64E22 /* DesafioPicPayiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesafioPicPayiOS.entitlements; sourceTree = "<group>"; };
 		18916628224318A300F64E22 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		1891662A2243463200F64E22 /* ContactListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListInteractorTests.swift; sourceTree = "<group>"; };
+		1891662F2243532B00F64E22 /* PaymentWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWorkerTests.swift; sourceTree = "<group>"; };
+		18916631224354C500F64E22 /* payment_approved.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = payment_approved.json; sourceTree = "<group>"; };
+		1891663322435BC700F64E22 /* payment_repproved.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = payment_repproved.json; sourceTree = "<group>"; };
+		1891663522435FA800F64E22 /* PaymentPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenterMock.swift; sourceTree = "<group>"; };
 		18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioPicPayiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A24E5B2237231F003F0F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A24E6222372323003F0F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 				189166242242EBFE00F64E22 /* Jsons */,
 				1891661C2242B6A300F64E22 /* PicPayApiRequestMock.swift */,
 				1891661E2242B79200F64E22 /* ContacListPresenterMock.swift */,
+				1891663522435FA800F64E22 /* PaymentPresenterMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -197,6 +206,8 @@
 		189166242242EBFE00F64E22 /* Jsons */ = {
 			isa = PBXGroup;
 			children = (
+				1891663322435BC700F64E22 /* payment_repproved.json */,
+				18916631224354C500F64E22 /* payment_approved.json */,
 				189166252242EC1500F64E22 /* users.json */,
 			);
 			path = Jsons;
@@ -205,6 +216,7 @@
 		1891662C22434F2600F64E22 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				189166222242D05F00F64E22 /* AppRouterTests.swift */,
 				1891662E2243521600F64E22 /* Payment */,
 				1891662D22434F3300F64E22 /* ContactList */,
 			);
@@ -214,7 +226,6 @@
 		1891662D22434F3300F64E22 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				189166222242D05F00F64E22 /* AppRouterTests.swift */,
 				189166202242C76400F64E22 /* ContactListWorkerTests.swift */,
 				1891662A2243463200F64E22 /* ContactListInteractorTests.swift */,
 			);
@@ -224,6 +235,7 @@
 		1891662E2243521600F64E22 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				1891662F2243532B00F64E22 /* PaymentWorkerTests.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -602,7 +614,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18916632224354C500F64E22 /* payment_approved.json in Resources */,
 				189166262242EC1500F64E22 /* users.json in Resources */,
+				1891663422435BC700F64E22 /* payment_repproved.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +716,8 @@
 			files = (
 				189166232242D05F00F64E22 /* AppRouterTests.swift in Sources */,
 				189166212242C76400F64E22 /* ContactListWorkerTests.swift in Sources */,
+				1891663622435FA800F64E22 /* PaymentPresenterMock.swift in Sources */,
+				189166302243532B00F64E22 /* PaymentWorkerTests.swift in Sources */,
 				1891661D2242B6A300F64E22 /* PicPayApiRequestMock.swift in Sources */,
 				1891662B2243463200F64E22 /* ContactListInteractorTests.swift in Sources */,
 				1891661F2242B79200F64E22 /* ContacListPresenterMock.swift in Sources */,
