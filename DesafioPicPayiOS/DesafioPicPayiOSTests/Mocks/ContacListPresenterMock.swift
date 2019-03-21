@@ -10,6 +10,7 @@
 
 
 class ContactListPresenterMock: ContactListPresenter {
+    var card: Card?
     var viewModel: [UserViewModel]?
     var loadingPresented: Bool = false
     var errorWasPresented: Bool = false
@@ -31,5 +32,9 @@ class ContactListPresenterMock: ContactListPresenter {
     override func presentUsers(list: [UserViewModel]) {
         viewModel = list
         usersListPresented = true
+    }
+    
+    override func presentCardSaved(cardSaved: Card?) {
+        card = cardSaved
     }
 }
