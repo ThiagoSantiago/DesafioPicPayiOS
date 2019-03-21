@@ -14,7 +14,7 @@ struct Payment: Decodable {
 
 struct Transaction: Decodable {
     let id: Int
-    let value: Double
+    let value: String
     let success: Bool
     let status: String
     let timestamp: Int

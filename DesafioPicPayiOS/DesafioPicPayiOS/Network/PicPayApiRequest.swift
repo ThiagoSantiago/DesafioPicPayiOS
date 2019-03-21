@@ -46,6 +46,10 @@ class PicPayApiRequest: PicPayApiRequestProtocol {
                 completion(.failure(.unknown(error.localizedDescription)))
             }
             
+            if let returnData = String(data: data!, encoding: .utf8) {
+                print(returnData)
+            }
+            
             guard let data = data else {
                 completion(.failure(.brokenData))
                 return

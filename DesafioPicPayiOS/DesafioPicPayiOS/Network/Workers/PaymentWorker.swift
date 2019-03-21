@@ -18,7 +18,6 @@ class PaymentWorker {
         self.requester = requester
     }
     
-    
     typealias MakeAPaymentSuccess = (_ result: Payment) -> Void
     func makeAPayment(paymentData: PaymentViewModel, success: @escaping MakeAPaymentSuccess, failure: @escaping Failure) {
         
@@ -30,7 +29,12 @@ class PaymentWorker {
                     let decoder = JSONDecoder()
                     let paymentData = try decoder.decode(Payment.self, from: data)
                     
-                    success(paymentData)
+                    if paymentData.transaction.success {
+                        success(paymentData)
+                    } else {
+                        failure(.unknown("Operação recusada."))
+                    }
+                    
                 } catch {
                     failure(.couldNotParseObject)
                 }

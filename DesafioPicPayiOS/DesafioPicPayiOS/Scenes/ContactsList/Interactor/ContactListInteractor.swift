@@ -44,7 +44,8 @@ class ContactListInteractor: ContactListInteractorProtocol {
     }
     
     private func treatResultData(result: UsersList) -> [UserViewModel] {
-        return result.map { UserViewModel(name: $0.name,
+        return result.map { UserViewModel(id: $0.id,
+                                          name: $0.name,
                                           img: $0.img,
                                           username: $0.username)}
     }

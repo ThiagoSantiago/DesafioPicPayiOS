@@ -24,15 +24,19 @@ class AppRouter {
         self.navigation.pushViewController(viewController, animated: false)
     }
     
-    func routeToNewCard() {
-        let viewController = NewCardViewController()
+    func routeToNewCard(user: UserViewModel) {
+        let presenter = RegisterCardPresenter()
+        let interactor = RegisterCardInteractor(presenter: presenter)
+        let viewController = NewCardViewController(interactor: interactor, viewModel: user)
+        
+        presenter.viewController = viewController
         self.navigation.pushViewController(viewController, animated: true)
     }
     
-    func routeToRegisterNewCard() {
+    func routeToRegisterNewCard(viewModel: PaymentViewModel, isEditing: Bool = false) {
         let presenter = RegisterCardPresenter()
         let interactor = RegisterCardInteractor(presenter: presenter)
-        let viewController = RegisterNewCardViewController(interactor: interactor)
+        let viewController = RegisterNewCardViewController(interactor: interactor, viewModel: viewModel, isEditing: isEditing)
         
         presenter.viewController = viewController
         self.navigation.pushViewController(viewController, animated: true)

@@ -106,7 +106,7 @@ extension ContactsListViewController: UITableViewDataSource {
 extension ContactsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismissKeyboard()
-        AppRouter.shared.routeToNewCard()
+        AppRouter.shared.routeToNewCard(user: tableViewData[indexPath.row])
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -14,3 +14,12 @@ struct Card {
     let securityCode: String
     let expirationDate: String
 }
+
+extension Card: Equatable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.owner == rhs.owner &&
+            lhs.cardNumber == rhs.cardNumber &&
+            lhs.securityCode == rhs.securityCode &&
+            lhs.expirationDate == rhs.expirationDate
+    }
+}

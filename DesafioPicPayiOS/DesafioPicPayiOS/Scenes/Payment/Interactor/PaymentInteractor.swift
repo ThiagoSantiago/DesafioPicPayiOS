@@ -39,7 +39,7 @@ class PaymentInteractor: PaymentInteractorProtocol {
     
     private func treatPaymentData(result: Payment) -> TransactionViewModel {
         return TransactionViewModel(time: "\(result.transaction.timestamp.formatToStringDate())",
-            card: "Cartão Master 1234", value: result.transaction.value.formatToCurrency(), userImg: result.transaction.destinationUser.img, username: result.transaction.destinationUser.username, transactionId: result.transaction.id)
+            card: "Cartão Master 1234", value: result.transaction.value, userImg: result.transaction.destinationUser.img, username: result.transaction.destinationUser.username, transactionId: result.transaction.id)
     }
 }
 

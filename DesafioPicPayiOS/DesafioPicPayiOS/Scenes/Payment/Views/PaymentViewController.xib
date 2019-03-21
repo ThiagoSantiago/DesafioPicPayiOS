@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="bottonButtonConstraint" destination="QAh-fp-5go" id="FaT-7K-K6t"/>
                 <outlet property="creditCard" destination="w4L-Sh-yrX" id="H1g-Qw-KJq"/>
+                <outlet property="currencySymbol" destination="hcT-bf-tIU" id="1tJ-6L-j3I"/>
                 <outlet property="payButton" destination="8HB-HN-BPH" id="RG6-n7-kwM"/>
                 <outlet property="userImage" destination="y5T-XL-VmN" id="oAc-5v-pfC"/>
                 <outlet property="userName" destination="fjz-Y4-zGe" id="fbb-69-EAg"/>

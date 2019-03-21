@@ -12,17 +12,11 @@ import SwiftKeychainWrapper
 
 class KeychainServiceWorker: NSObject {
     
-    let customKeychainWrapperInstance: KeychainWrapper?
-    
-    public override init() {
-        customKeychainWrapperInstance = KeychainWrapper(serviceName: Constants.picPayCardService, accessGroup: Constants.picPayAccessGroup)
-    }
-    
     func saveCard(_ card: Card) -> Bool {
-        let saveCardNumberSuccessful: Bool = customKeychainWrapperInstance?.set(card.cardNumber, forKey: "cardNumber") ?? false
-        let saveSecurityCodeSuccessful: Bool = customKeychainWrapperInstance?.set(card.securityCode, forKey: "securityCode") ?? false
-        let saveExpiryDateSuccessful: Bool = customKeychainWrapperInstance?.set(card.expirationDate, forKey: "expiryDate") ?? false
-        let saveOwnerSuccessful: Bool = customKeychainWrapperInstance?.set(card.owner, forKey: "owner") ?? false
+        let saveCardNumberSuccessful: Bool = KeychainWrapper.standard.set(card.cardNumber, forKey: "cardNumber")
+        let saveSecurityCodeSuccessful: Bool = KeychainWrapper.standard.set(card.securityCode, forKey: "securityCode")
+        let saveExpiryDateSuccessful: Bool = KeychainWrapper.standard.set(card.expirationDate, forKey: "expiryDate")
+        let saveOwnerSuccessful: Bool = KeychainWrapper.standard.set(card.owner, forKey: "owner")
         
         return (saveCardNumberSuccessful &&
                 saveSecurityCodeSuccessful &&
@@ -31,10 +25,11 @@ class KeychainServiceWorker: NSObject {
     }
     
     func loadCard() -> Card {
-        let cardNumberRetrieved: String = customKeychainWrapperInstance?.string(forKey: "cardNumber") ?? ""
-        let securityCodeRetrieved: String = customKeychainWrapperInstance?.string(forKey: "securityCode") ?? ""
-        let expiryDateRetrieved: String = customKeychainWrapperInstance?.string(forKey: "owner") ?? ""
-        let ownerRetrieved: String = customKeychainWrapperInstance?.string(forKey: "owner") ?? ""
+        
+        let cardNumberRetrieved: String = KeychainWrapper.standard.string(forKey: "cardNumber") ?? ""
+        let securityCodeRetrieved: String = KeychainWrapper.standard.string(forKey: "securityCode") ?? ""
+        let expiryDateRetrieved: String = KeychainWrapper.standard.string(forKey: "expiryDate") ?? ""
+        let ownerRetrieved: String = KeychainWrapper.standard.string(forKey: "owner") ?? ""
         
         return Card(owner: ownerRetrieved, cardNumber: cardNumberRetrieved, securityCode: securityCodeRetrieved, expirationDate: expiryDateRetrieved)
     }

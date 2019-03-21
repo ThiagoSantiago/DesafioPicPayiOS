@@ -14,10 +14,15 @@
 		1848BC9422388D8100F27019 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC9322388D8100F27019 /* FloatingTextField.swift */; };
 		1848BC9722388F8300F27019 /* RegisterNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848BC9522388F8300F27019 /* RegisterNewCardViewController.swift */; };
 		1848BC9822388F8300F27019 /* RegisterNewCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848BC9622388F8300F27019 /* RegisterNewCardViewController.xib */; };
+		1891661D2242B6A300F64E22 /* PicPayApiRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891661C2242B6A300F64E22 /* PicPayApiRequestMock.swift */; };
+		1891661F2242B79200F64E22 /* ContacListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891661E2242B79200F64E22 /* ContacListPresenterMock.swift */; };
+		189166212242C76400F64E22 /* ContactListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189166202242C76400F64E22 /* ContactListWorkerTests.swift */; };
+		189166232242D05F00F64E22 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189166222242D05F00F64E22 /* AppRouterTests.swift */; };
+		189166262242EC1500F64E22 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 189166252242EC1500F64E22 /* users.json */; };
+		18916629224318A300F64E22 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18916628224318A300F64E22 /* UIColor+Extensions.swift */; };
 		18A24E5C2237231F003F0F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E5B2237231F003F0F4A /* AppDelegate.swift */; };
 		18A24E6322372323003F0F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6222372323003F0F4A /* Assets.xcassets */; };
 		18A24E6622372323003F0F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E6422372323003F0F4A /* LaunchScreen.storyboard */; };
-		18A24E7122372323003F0F4A /* DesafioPicPayiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E7022372323003F0F4A /* DesafioPicPayiOSTests.swift */; };
 		18A24E8022372D1E003F0F4A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E7F22372D1E003F0F4A /* AppRouter.swift */; };
 		18A24E8722372EC7003F0F4A /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24E8522372EC7003F0F4A /* ContactsListViewController.swift */; };
 		18A24E8822372EC7003F0F4A /* ContactsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A24E8622372EC7003F0F4A /* ContactsListViewController.xib */; };
@@ -79,13 +84,19 @@
 		1848BC9322388D8100F27019 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		1848BC9522388F8300F27019 /* RegisterNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewCardViewController.swift; sourceTree = "<group>"; };
 		1848BC9622388F8300F27019 /* RegisterNewCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterNewCardViewController.xib; sourceTree = "<group>"; };
+		1891661C2242B6A300F64E22 /* PicPayApiRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPayApiRequestMock.swift; sourceTree = "<group>"; };
+		1891661E2242B79200F64E22 /* ContacListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContacListPresenterMock.swift; sourceTree = "<group>"; };
+		189166202242C76400F64E22 /* ContactListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListWorkerTests.swift; sourceTree = "<group>"; };
+		189166222242D05F00F64E22 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		189166252242EC1500F64E22 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		189166272242EE0300F64E22 /* DesafioPicPayiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesafioPicPayiOS.entitlements; sourceTree = "<group>"; };
+		18916628224318A300F64E22 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		18A24E582237231F003F0F4A /* DesafioPicPayiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioPicPayiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A24E5B2237231F003F0F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A24E6222372323003F0F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A24E6522372323003F0F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A24E6722372323003F0F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A24E6C22372323003F0F4A /* DesafioPicPayiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioPicPayiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18A24E7022372323003F0F4A /* DesafioPicPayiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioPicPayiOSTests.swift; sourceTree = "<group>"; };
 		18A24E7222372323003F0F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A24E7F22372D1E003F0F4A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		18A24E8522372EC7003F0F4A /* ContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +182,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1891661B2242B67400F64E22 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				189166242242EBFE00F64E22 /* Jsons */,
+				1891661C2242B6A300F64E22 /* PicPayApiRequestMock.swift */,
+				1891661E2242B79200F64E22 /* ContacListPresenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		189166242242EBFE00F64E22 /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				189166252242EC1500F64E22 /* users.json */,
+			);
+			path = Jsons;
+			sourceTree = "<group>";
+		};
 		18A24E4F2237231F003F0F4A = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +223,7 @@
 		18A24E5A2237231F003F0F4A /* DesafioPicPayiOS */ = {
 			isa = PBXGroup;
 			children = (
+				189166272242EE0300F64E22 /* DesafioPicPayiOS.entitlements */,
 				18A24E7D22372CEF003F0F4A /* Common */,
 				18A24E7C22372CC1003F0F4A /* Network */,
 				18A24E7E22372CFC003F0F4A /* Router */,
@@ -209,7 +239,9 @@
 		18A24E6F22372323003F0F4A /* DesafioPicPayiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				18A24E7022372323003F0F4A /* DesafioPicPayiOSTests.swift */,
+				189166222242D05F00F64E22 /* AppRouterTests.swift */,
+				189166202242C76400F64E22 /* ContactListWorkerTests.swift */,
+				1891661B2242B67400F64E22 /* Mocks */,
 				18A24E7222372323003F0F4A /* Info.plist */,
 			);
 			path = DesafioPicPayiOSTests;
@@ -345,6 +377,7 @@
 				18EADB962241E39700731347 /* Int+Extensions.swift */,
 				18EADB982241E50400731347 /* Double+Extensions.swift */,
 				18EADB9A2241ED3D00731347 /* String+Extensions.swift */,
+				18916628224318A300F64E22 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -490,6 +523,11 @@
 				TargetAttributes = {
 					18A24E572237231F003F0F4A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					18A24E6B22372323003F0F4A = {
 						CreatedOnToolsVersion = 10.1;
@@ -537,6 +575,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189166262242EC1500F64E22 /* users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +663,7 @@
 				1848BC9722388F8300F27019 /* RegisterNewCardViewController.swift in Sources */,
 				18A24EA822376868003F0F4A /* UserViewModel.swift in Sources */,
 				18A24E8B223731D3003F0F4A /* HeaderView.swift in Sources */,
+				18916629224318A300F64E22 /* UIColor+Extensions.swift in Sources */,
 				18A24EAA2237F813003F0F4A /* UIImage+Extensions.swift in Sources */,
 				18EADB8D224144F700731347 /* TransactionViewModel.swift in Sources */,
 			);
@@ -633,7 +673,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A24E7122372323003F0F4A /* DesafioPicPayiOSTests.swift in Sources */,
+				189166232242D05F00F64E22 /* AppRouterTests.swift in Sources */,
+				189166212242C76400F64E22 /* ContactListWorkerTests.swift in Sources */,
+				1891661D2242B6A300F64E22 /* PicPayApiRequestMock.swift in Sources */,
+				1891661F2242B79200F64E22 /* ContacListPresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +823,7 @@
 			baseConfigurationReference = 343A2D8A8C3629689AF6EB8E /* Pods-DesafioPicPayiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesafioPicPayiOS/DesafioPicPayiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C247LTFS54;
 				INFOPLIST_FILE = DesafioPicPayiOS/Info.plist;
@@ -799,6 +843,7 @@
 			baseConfigurationReference = A3F39DA45C00F0FA484173C1 /* Pods-DesafioPicPayiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesafioPicPayiOS/DesafioPicPayiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C247LTFS54;
 				INFOPLIST_FILE = DesafioPicPayiOS/Info.plist;

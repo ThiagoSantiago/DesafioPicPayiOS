@@ -36,11 +36,11 @@ enum PicPayPaymentServiceSetup: PicPayApiSetupProtocol {
     var parameters: [String : Any] {
         switch self {
         case .makeAPayment(let paymentData):
-            return ["card_number" : paymentData.cardNumber,
-                    "cvv" : paymentData.securityCode,
+            return ["card_number" : paymentData.card?.cardNumber,
+                    "cvv" : paymentData.card?.securityCode,
                     "value" : paymentData.value,
-                    "expiry_date" : paymentData.expiryDate,
-                    "destination_user_id" : paymentData.destinationUser]
+                    "expiry_date" : paymentData.card?.expirationDate,
+                    "destination_user_id" : paymentData.destinationUser.id]
         }
     }
 }

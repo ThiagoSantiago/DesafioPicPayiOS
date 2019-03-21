@@ -20,6 +20,7 @@ class PaymentViewController: BaseViewController {
     @IBOutlet weak var creditCard: UILabel!
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var currencySymbol: UILabel!
     @IBOutlet weak var valueTextField: UITextField!
     @IBOutlet weak var bottonButtonConstraint: NSLayoutConstraint!
     
@@ -45,9 +46,10 @@ class PaymentViewController: BaseViewController {
         configViews()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setContent()
         valueTextField.becomeFirstResponder()
     }
     
@@ -64,6 +66,14 @@ class PaymentViewController: BaseViewController {
         valueTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
+    private func setContent() {
+        let last4Numbers = viewModel?.card?.cardNumber.suffix(4)
+        
+        creditCard.text = "Mastercard \(last4Numbers ?? "----")"
+        userName.text = viewModel?.destinationUser.username
+        userImage.loadImage(from: viewModel?.destinationUser.img ?? "")
+    }
+    
     private func addGestures() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
@@ -76,6 +86,9 @@ class PaymentViewController: BaseViewController {
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
+        textField.textColor = UIColor.PicpayGreenTextField
+        currencySymbol.textColor = UIColor.PicpayGreenTextField
+        
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }
@@ -100,10 +113,12 @@ class PaymentViewController: BaseViewController {
     }
     
     @IBAction func editCreditCardPressed(_ sender: Any) {
-        AppRouter.shared.routeToRegisterNewCard()
+        guard let paymentViewModel = viewModel else { return }
+        AppRouter.shared.routeToRegisterNewCard(viewModel: paymentViewModel, isEditing: true)
     }
     
     @IBAction func payButtonPressed(_ sender: Any) {
+        viewModel?.value = valueTextField.text
         if let paymentData = viewModel {
             interactor?.makeApayment(with: paymentData)
         }

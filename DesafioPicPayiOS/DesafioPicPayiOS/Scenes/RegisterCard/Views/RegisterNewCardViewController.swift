@@ -21,14 +21,16 @@ class RegisterNewCardViewController: UIViewController {
     @IBOutlet weak var expirationDate: FloatingTextField!
     @IBOutlet weak var bottonButtonConstraint: NSLayoutConstraint!
     
-    var activeTextField = UITextField()
-    var interactor: RegisterCardInteractor?
-    let service = "myService"
+    private var isEditingCard: Bool = false
+    private var viewModel: PaymentViewModel?
+    private var activeTextField = UITextField()
+    private var interactor: RegisterCardInteractor?
     
-    
-    init(interactor: RegisterCardInteractor) {
+    init(interactor: RegisterCardInteractor, viewModel: PaymentViewModel, isEditing: Bool) {
         super.init(nibName: "RegisterNewCardViewController", bundle: Bundle.main)
+        self.viewModel = viewModel
         self.interactor = interactor
+        self.isEditingCard = isEditing
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,6 +41,10 @@ class RegisterNewCardViewController: UIViewController {
         super.viewDidLoad()
         setup()
         saveButton.layer.cornerRadius = 25
+        
+        if isEditingCard {
+            interactor?.loadCard()
+        }
     }
     
     private func setup() {
@@ -51,15 +57,17 @@ class RegisterNewCardViewController: UIViewController {
         cardOwnerName.validation = { $0.count > 3 }
         securityCode.validation = { $0.count == 3 }
         expirationDate.validation = { $0.count == 5 }
-        
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(textField:)), name: UITextField.textDidChangeNotification, object: nil)
+
+        addNotificantionObreservers()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
+    }
+    
+    private func addNotificantionObreservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(textField:)), name: UITextField.textDidChangeNotification, object: nil)
     }
     
     @objc private func dismissKeyboard() {
@@ -95,6 +103,7 @@ class RegisterNewCardViewController: UIViewController {
                         securityCode: securityCode.text ?? "",
                         expirationDate: expirationDate.text ?? "")
         
+        viewModel?.card = card
         interactor?.saveCard(card)
     }
 }
@@ -172,7 +181,8 @@ extension RegisterNewCardViewController: UITextFieldDelegate {
 extension RegisterNewCardViewController: RegisterCardViewProtocol {
     func displayCardSaved(success: Bool) {
         if success {
-            AppRouter.shared.routeToPayment(PaymentViewModel())
+            guard let paymentModel = viewModel else { return }
+            AppRouter.shared.routeToPayment(paymentModel)
         }
     }
     
@@ -181,5 +191,7 @@ extension RegisterNewCardViewController: RegisterCardViewProtocol {
         cardNumber.text = card.cardNumber
         securityCode.text = card.securityCode
         expirationDate.text = card.expirationDate
+        
+        self.saveButton.isHidden = validateForm()
     }
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 struct UserViewModel {
+    let id: Int
     let name: String
     let img: String
     let username: String
@@ -16,8 +17,9 @@ struct UserViewModel {
 
 extension UserViewModel: Equatable {
     static func ==(lhs: UserViewModel, rhs: UserViewModel) -> Bool {
-        return lhs.name == rhs.name &&
-        lhs.img == rhs.img &&
-        lhs.username == rhs.username
+        return lhs.id == rhs.id &&
+               lhs.name == rhs.name &&
+               lhs.img == rhs.img &&
+               lhs.username == rhs.username
     }
 }
